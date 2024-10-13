@@ -109,5 +109,17 @@ namespace SegundoProyecto
             if (textBoxUser.Text == user && textBoxPassword.Text == pass) return true;
             else return false;
         }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            FormularioInicio formularioInicio = new();
+            formularioInicio.Show();
+            this.Hide();
+        }
+
+        private void buttonClose_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             panelTop = new Panel();
+            buttonClose = new Button();
             linkLabel1 = new LinkLabel();
             label4 = new Label();
             labelErrorMessage = new Label();
@@ -48,6 +49,7 @@
             // panelTop
             // 
             panelTop.BackColor = Color.White;
+            panelTop.Controls.Add(buttonClose);
             panelTop.Controls.Add(linkLabel1);
             panelTop.Controls.Add(label4);
             panelTop.Controls.Add(labelErrorMessage);
@@ -64,23 +66,38 @@
             panelTop.TabIndex = 0;
             panelTop.Paint += panelTop_Paint;
             // 
+            // buttonClose
+            // 
+            buttonClose.FlatAppearance.BorderSize = 0;
+            buttonClose.FlatStyle = FlatStyle.Flat;
+            buttonClose.Image = Properties.Resources.material_symbols_light__close__1_;
+            buttonClose.Location = new Point(232, 3);
+            buttonClose.Name = "buttonClose";
+            buttonClose.Size = new Size(27, 27);
+            buttonClose.TabIndex = 9;
+            buttonClose.UseVisualStyleBackColor = true;
+            buttonClose.Click += buttonClose_Click;
+            // 
             // linkLabel1
             // 
             linkLabel1.AutoSize = true;
+            linkLabel1.Font = new Font("Victor Mono", 8.249999F);
             linkLabel1.LinkColor = SystemColors.MenuHighlight;
-            linkLabel1.Location = new Point(83, 371);
+            linkLabel1.Location = new Point(88, 379);
             linkLabel1.Name = "linkLabel1";
-            linkLabel1.Size = new Size(98, 24);
+            linkLabel1.Size = new Size(86, 20);
             linkLabel1.TabIndex = 8;
             linkLabel1.TabStop = true;
             linkLabel1.Text = "Registrarse";
+            linkLabel1.LinkClicked += linkLabel1_LinkClicked;
             // 
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(32, 347);
+            label4.Font = new Font("Victor Mono", 8.249999F);
+            label4.Location = new Point(37, 355);
             label4.Name = "label4";
-            label4.Size = new Size(218, 24);
+            label4.Size = new Size(191, 20);
             label4.TabIndex = 7;
             label4.Text = "¿Aún no tienes una cuenta?";
             // 
@@ -89,7 +106,7 @@
             labelErrorMessage.AutoSize = true;
             labelErrorMessage.Font = new Font("Victor Mono", 5.999999F, FontStyle.Regular, GraphicsUnit.Point, 0);
             labelErrorMessage.ForeColor = Color.DarkRed;
-            labelErrorMessage.Location = new Point(31, 235);
+            labelErrorMessage.Location = new Point(27, 254);
             labelErrorMessage.MaximumSize = new Size(200, 0);
             labelErrorMessage.Name = "labelErrorMessage";
             labelErrorMessage.Size = new Size(0, 14);
@@ -101,7 +118,7 @@
             label3.BackColor = Color.Transparent;
             label3.Font = new Font("Victor Mono", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label3.ForeColor = Color.Black;
-            label3.Location = new Point(29, 173);
+            label3.Location = new Point(25, 192);
             label3.Name = "label3";
             label3.Size = new Size(90, 24);
             label3.TabIndex = 5;
@@ -113,7 +130,7 @@
             label2.BackColor = Color.Transparent;
             label2.Font = new Font("Victor Mono", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label2.ForeColor = Color.Black;
-            label2.Location = new Point(29, 88);
+            label2.Location = new Point(25, 107);
             label2.Name = "label2";
             label2.Size = new Size(66, 24);
             label2.TabIndex = 4;
@@ -125,7 +142,8 @@
             button1.FlatAppearance.BorderSize = 0;
             button1.FlatStyle = FlatStyle.Flat;
             button1.Font = new Font("Victor Mono", 11.9999981F);
-            button1.Location = new Point(69, 282);
+            button1.ForeColor = SystemColors.Control;
+            button1.Location = new Point(70, 292);
             button1.Name = "button1";
             button1.Size = new Size(124, 40);
             button1.TabIndex = 3;
@@ -138,7 +156,7 @@
             textBoxPassword.BorderStyle = BorderStyle.None;
             textBoxPassword.Font = new Font("Victor Mono", 9.75F);
             textBoxPassword.ForeColor = Color.Black;
-            textBoxPassword.Location = new Point(33, 200);
+            textBoxPassword.Location = new Point(29, 219);
             textBoxPassword.MaxLength = 20;
             textBoxPassword.Multiline = true;
             textBoxPassword.Name = "textBoxPassword";
@@ -153,7 +171,7 @@
             textBoxUser.BorderStyle = BorderStyle.None;
             textBoxUser.Font = new Font("Victor Mono", 9.75F);
             textBoxUser.ForeColor = Color.Black;
-            textBoxUser.Location = new Point(33, 115);
+            textBoxUser.Location = new Point(29, 134);
             textBoxUser.MaxLength = 20;
             textBoxUser.Multiline = true;
             textBoxUser.Name = "textBoxUser";
@@ -168,7 +186,7 @@
             label1.BackColor = Color.Transparent;
             label1.Font = new Font("Victor Mono SemiBold", 15.7499981F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.Black;
-            label1.Location = new Point(33, 31);
+            label1.Location = new Point(29, 40);
             label1.Name = "label1";
             label1.Size = new Size(199, 38);
             label1.TabIndex = 0;
@@ -229,5 +247,6 @@
         private Label labelErrorMessage;
         private LinkLabel linkLabel1;
         private Label label4;
+        private Button buttonClose;
     }
 }

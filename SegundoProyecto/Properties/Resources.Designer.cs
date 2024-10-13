@@ -63,6 +63,96 @@ namespace SegundoProyecto.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap humbleicons__maximize {
+            get {
+                object obj = ResourceManager.GetObject("humbleicons--maximize", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap iconamoon__screen_normal_thin {
+            get {
+                object obj = ResourceManager.GetObject("iconamoon--screen-normal-thin", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap iconamoon__screen_normal_thin__1_ {
+            get {
+                object obj = ResourceManager.GetObject("iconamoon--screen-normal-thin (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap iconamoon__screen_normal_thin__2_ {
+            get {
+                object obj = ResourceManager.GetObject("iconamoon--screen-normal-thin (2)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap iconamoon__screen_normal_thin__3_ {
+            get {
+                object obj = ResourceManager.GetObject("iconamoon--screen-normal-thin (3)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap iconamoon__screen_normal_thin__4_ {
+            get {
+                object obj = ResourceManager.GetObject("iconamoon--screen-normal-thin (4)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap material_symbols__minimize {
+            get {
+                object obj = ResourceManager.GetObject("material-symbols--minimize", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap material_symbols_light__close {
+            get {
+                object obj = ResourceManager.GetObject("material-symbols-light--close", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap material_symbols_light__close__1_ {
+            get {
+                object obj = ResourceManager.GetObject("material-symbols-light--close (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap pexels_lum3n_44775_309724 {
             get {
                 object obj = ResourceManager.GetObject("pexels-lum3n-44775-309724", resourceCulture);
@@ -96,6 +186,76 @@ namespace SegundoProyecto.Properties {
         internal static System.Drawing.Bitmap pexels_rickyrecap_1926988__1_ {
             get {
                 object obj = ResourceManager.GetObject("pexels-rickyrecap-1926988 (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap PruebaDddossssMesa_de_trabajo_1 {
+            get {
+                object obj = ResourceManager.GetObject("PruebaDddossssMesa de trabajo 1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap PruebaDosMesa_de_trabajo_1 {
+            get {
+                object obj = ResourceManager.GetObject("PruebaDosMesa de trabajo 1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap PruebaDossMesa_de_trabajo_1 {
+            get {
+                object obj = ResourceManager.GetObject("PruebaDossMesa de trabajo 1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap PruebaDossssMesa_de_trabajo_1 {
+            get {
+                object obj = ResourceManager.GetObject("PruebaDossssMesa de trabajo 1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap PruebaDsccddossssMesa_de_trabajo_1 {
+            get {
+                object obj = ResourceManager.GetObject("PruebaDsccddossssMesa de trabajo 1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap PruebaDscddossssMesa_de_trabajo_1 {
+            get {
+                object obj = ResourceManager.GetObject("PruebaDscddossssMesa de trabajo 1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap PruebaDssccddossssMesa_de_trabajo_1 {
+            get {
+                object obj = ResourceManager.GetObject("PruebaDssccddossssMesa de trabajo 1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
