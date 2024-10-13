@@ -28,8 +28,8 @@ namespace SegundoProyecto
             {
                 new FormularioLogin().Show();
                 this.Hide();
-                this.Close();
                 timerSplashScreen.Stop();
+                this.Close();
             }
         }
 

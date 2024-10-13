@@ -153,6 +153,16 @@ namespace SegundoProyecto.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap material_symbols_light__minimize {
+            get {
+                object obj = ResourceManager.GetObject("material-symbols-light--minimize", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap pexels_lum3n_44775_309724 {
             get {
                 object obj = ResourceManager.GetObject("pexels-lum3n-44775-309724", resourceCulture);

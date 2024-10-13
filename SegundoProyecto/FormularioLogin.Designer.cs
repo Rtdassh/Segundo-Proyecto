@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             panelTop = new Panel();
+            buttonMinimize = new Button();
             buttonClose = new Button();
             linkLabel1 = new LinkLabel();
             label4 = new Label();
@@ -49,6 +50,7 @@
             // panelTop
             // 
             panelTop.BackColor = Color.White;
+            panelTop.Controls.Add(buttonMinimize);
             panelTop.Controls.Add(buttonClose);
             panelTop.Controls.Add(linkLabel1);
             panelTop.Controls.Add(label4);
@@ -65,6 +67,18 @@
             panelTop.Size = new Size(262, 414);
             panelTop.TabIndex = 0;
             panelTop.Paint += panelTop_Paint;
+            // 
+            // buttonMinimize
+            // 
+            buttonMinimize.FlatAppearance.BorderSize = 0;
+            buttonMinimize.FlatStyle = FlatStyle.Flat;
+            buttonMinimize.Image = Properties.Resources.material_symbols_light__minimize;
+            buttonMinimize.Location = new Point(199, -12);
+            buttonMinimize.Name = "buttonMinimize";
+            buttonMinimize.Size = new Size(27, 42);
+            buttonMinimize.TabIndex = 10;
+            buttonMinimize.UseVisualStyleBackColor = true;
+            buttonMinimize.Click += buttonMinimize_Click;
             // 
             // buttonClose
             // 
@@ -248,5 +262,6 @@
         private LinkLabel linkLabel1;
         private Label label4;
         private Button buttonClose;
+        private Button buttonMinimize;
     }
 }

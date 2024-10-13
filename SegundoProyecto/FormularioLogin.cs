@@ -21,6 +21,7 @@ namespace SegundoProyecto
         {
             InitializeComponent();
         }
+
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
@@ -35,27 +36,19 @@ namespace SegundoProyecto
         private void FormularioLogin_Load(object sender, EventArgs e)
         {
             textBoxUser.Height = 24;
+            textBoxUser.KeyPress += new KeyPressEventHandler(CaracterEnterNegado!);
+            textBoxPassword.KeyPress += new KeyPressEventHandler(CaracterEnterNegado!);
         }
 
         private void panelTop_Paint(object sender, PaintEventArgs e)
         {
-            if (estadoTextBoxUser)
-            {
-                DibujoRectangulo(sender, e, (116, 198, 157), textBoxUser, 3, 3);
-            }
-            else
-            {
-                DibujoRectangulo(sender, e, (45, 106, 79), textBoxUser);
-            }
+            if (estadoTextBoxUser) DibujoRectangulo(sender, e, (116, 198, 157), textBoxUser, 3, 3);
 
-            if (estadoTextBoxPassword)
-            {
-                DibujoRectangulo(sender, e, (116, 198, 157), textBoxPassword, 3, 3);
-            }
-            else
-            {
-                DibujoRectangulo(sender, e, (45, 106, 79), textBoxPassword);
-            }
+            else DibujoRectangulo(sender, e, (45, 106, 79), textBoxUser);
+
+            if (estadoTextBoxPassword) DibujoRectangulo(sender, e, (116, 198, 157), textBoxPassword, 3, 3);
+
+            else DibujoRectangulo(sender, e, (45, 106, 79), textBoxPassword);
         }
 
         private void DibujoRectangulo(object sender, PaintEventArgs e, (byte, byte, byte) coloresRGB, TextBox textBox, int grosorPen = 2, int grosor = 2)
@@ -65,6 +58,13 @@ namespace SegundoProyecto
             {
                 Pen pen = new Pen(Color.FromArgb(coloresRGB.Item1, coloresRGB.Item2, coloresRGB.Item3), grosorPen);
                 e.Graphics.DrawRectangle(pen, new Rectangle(textBox.Location.X, textBox.Location.Y + 30, textBox.Width + 1, grosor));
+            }
+        }
+        private void CaracterEnterNegado(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                e.Handled = true;
             }
         }
         private void textBoxUser_Enter(object sender, EventArgs e)
@@ -98,10 +98,8 @@ namespace SegundoProyecto
             {
                 MessageBox.Show($"Bienvenido {textBoxUser.Text}");
             }
-            else
-            {
-                labelErrorMessage.Text = "*Las credenciales ingresadas son incorrectas";
-            }
+            else if (textBoxUser.Text == "" || textBoxPassword.Text == "") labelErrorMessage.Text = "*Debes llenar todos los campos";
+            else labelErrorMessage.Text = "*Las credenciales ingresadas son incorrectas";
         }
 
         private bool VerificarCredenciales()
@@ -112,14 +110,19 @@ namespace SegundoProyecto
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            FormularioInicio formularioInicio = new();
-            formularioInicio.Show();
+            FormularioRegistro formularioRegistro = new();
+            formularioRegistro.Show();
             this.Hide();
         }
 
         private void buttonClose_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void buttonMinimize_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
         }
     }
 }
