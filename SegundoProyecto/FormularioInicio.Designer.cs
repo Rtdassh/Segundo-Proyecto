@@ -290,6 +290,7 @@
             Name = "FormularioInicio";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "FormularioInicio";
+            Load += FormularioInicio_Load;
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
             ResumeLayout(false);

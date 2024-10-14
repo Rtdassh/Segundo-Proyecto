@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,25 @@ namespace SegundoProyecto
 {
     public partial class FormularioInicio : Form
     {
+        MySqlConnection connection;
         public FormularioInicio()
         {
             InitializeComponent();
+            string connectionString = "server=localhost;port=3307;user=root;password=#TimeForceWildest24;database=world";
+            connection = new MySqlConnection(connectionString);
+        }
+
+        private void FormularioInicio_Load(object sender, EventArgs e)
+        {
+            try
+            {
+                connection.Open();
+                MessageBox.Show("Conexión exitosa a la base de datos");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al conectar a la base de datos: " + ex.Message);
+            }
         }
     }
 }
