@@ -22,8 +22,8 @@ namespace SegundoProyecto
         private void timerSplashScreen_Tick(object sender, EventArgs e)
         {
             contador += 100;
-            if(label3.Text.Contains("...")) label3.Text = "Cargando";
-            label3.Text += "."; 
+            if (label3.Text.Contains("...")) label3.Text = "Cargando";
+            label3.Text += ".";
             if (contador == 1000)
             {
                 new FormularioLogin().Show();
@@ -33,5 +33,9 @@ namespace SegundoProyecto
             }
         }
 
+        private void SplashScreen_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

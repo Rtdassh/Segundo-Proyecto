@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Microsoft.Win32;
+using SegundoProyecto.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,6 +10,7 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Input;
 
 namespace SegundoProyecto
 {
@@ -17,24 +20,28 @@ namespace SegundoProyecto
         bool estadoTextBoxPassword = false;
         const string user = "josu";
         const string pass = "123";
+        
         public FormularioLogin()
         {
             InitializeComponent();
-        }
-
-        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
-        private extern static void ReleaseCapture();
-        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
-        private extern static void SendMessage(nint hWnd, int wMsg, int wParam, int lParam);
+        }    
 
         private void pictureBox1_MouseDown(object sender, MouseEventArgs e)
         {
-            ReleaseCapture();
-            SendMessage(this.Handle, 0x112, 0xf012, 0);
+            
+            Librerias.ReleaseCapture();
+            Librerias.SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+        private void panelTop_MouseDown(object sender, MouseEventArgs e)
+        {
+            Librerias.ReleaseCapture();
+            Librerias.SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
 
         private void FormularioLogin_Load(object sender, EventArgs e)
         {
+            IntPtr region = Librerias.CreateRoundRectRgn(0, 0, this.Width, this.Height, 30, 30);
+            this.Region = System.Drawing.Region.FromHrgn(region);
             textBoxUser.Height = 24;
             textBoxUser.KeyPress += new KeyPressEventHandler(CaracterEnterNegado!);
             textBoxPassword.KeyPress += new KeyPressEventHandler(CaracterEnterNegado!);
@@ -97,6 +104,9 @@ namespace SegundoProyecto
             if (VerificarCredenciales())
             {
                 MessageBox.Show($"Bienvenido {textBoxUser.Text}");
+                new FormularioInicio().Show();
+                this.Hide();
+                this.Close();
             }
             else if (textBoxUser.Text == "" || textBoxPassword.Text == "") labelErrorMessage.Text = "*Debes llenar todos los campos";
             else labelErrorMessage.Text = "*Las credenciales ingresadas son incorrectas";
@@ -123,6 +133,8 @@ namespace SegundoProyecto
         private void buttonMinimize_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
+            
         }
+        
     }
 }

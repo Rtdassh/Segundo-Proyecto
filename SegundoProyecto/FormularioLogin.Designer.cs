@@ -67,6 +67,7 @@
             panelTop.Size = new Size(262, 414);
             panelTop.TabIndex = 0;
             panelTop.Paint += panelTop_Paint;
+            panelTop.MouseDown += panelTop_MouseDown;
             // 
             // buttonMinimize
             // 

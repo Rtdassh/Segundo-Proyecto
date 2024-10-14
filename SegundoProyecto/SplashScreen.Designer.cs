@@ -43,8 +43,8 @@
             // 
             // pictureBox1
             // 
-            pictureBox1.Image = Properties.Resources.PruebaDssccddossssMesa_de_trabajo_1;
-            pictureBox1.Location = new Point(-3, -6);
+            pictureBox1.Image = Properties.Resources._40163478_87031511;
+            pictureBox1.Location = new Point(-1, -3);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(425, 288);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
@@ -54,10 +54,10 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.BackColor = Color.FromArgb(60, 136, 126);
+            label1.BackColor = Color.White;
             label1.Font = new Font("Bebas Neue", 30F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.ForeColor = Color.WhiteSmoke;
-            label1.Location = new Point(252, 100);
+            label1.ForeColor = Color.FromArgb(52, 58, 64);
+            label1.Location = new Point(252, 127);
             label1.Margin = new Padding(0);
             label1.Name = "label1";
             label1.Size = new Size(159, 96);
@@ -68,10 +68,10 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.BackColor = Color.FromArgb(60, 136, 126);
+            label2.BackColor = Color.White;
             label2.Font = new Font("Sora", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label2.ForeColor = Color.WhiteSmoke;
-            label2.Location = new Point(100, 5);
+            label2.ForeColor = Color.FromArgb(52, 58, 64);
+            label2.Location = new Point(76, 9);
             label2.Margin = new Padding(0);
             label2.Name = "label2";
             label2.Size = new Size(217, 17);
@@ -82,10 +82,10 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.BackColor = Color.FromArgb(60, 136, 126);
+            label3.BackColor = Color.White;
             label3.Font = new Font("Sora", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label3.ForeColor = Color.WhiteSmoke;
-            label3.Location = new Point(273, 220);
+            label3.ForeColor = Color.FromArgb(52, 58, 64);
+            label3.Location = new Point(268, 223);
             label3.Margin = new Padding(0);
             label3.MaximumSize = new Size(200, 0);
             label3.Name = "label3";
@@ -98,6 +98,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.FromArgb(204, 167, 103);
             ClientSize = new Size(420, 277);
             Controls.Add(label3);
             Controls.Add(label2);
@@ -107,6 +108,7 @@
             Name = "SplashScreen";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "SplashScreen";
+            Load += SplashScreen_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
