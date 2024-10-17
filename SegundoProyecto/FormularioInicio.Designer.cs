@@ -65,7 +65,7 @@
             // 
             // menuStrip1
             // 
-            menuStrip1.BackColor = Color.LightGray;
+            menuStrip1.BackColor = Color.FromArgb(203, 153, 126);
             menuStrip1.Font = new Font("Sora", 9.749999F, FontStyle.Regular, GraphicsUnit.Point, 0);
             menuStrip1.Items.AddRange(new ToolStripItem[] { toolStripMenuItem1, archivoToolStripMenuItem1, editarToolStripMenuItem, herramientasToolStripMenuItem, ayudaToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
@@ -73,6 +73,7 @@
             menuStrip1.Size = new Size(800, 28);
             menuStrip1.TabIndex = 0;
             menuStrip1.Text = "menuStrip1";
+            menuStrip1.MouseDown += menuStrip1_MouseDown;
             // 
             // toolStripMenuItem1
             // 
@@ -234,13 +235,13 @@
             // personalizarToolStripMenuItem
             // 
             personalizarToolStripMenuItem.Name = "personalizarToolStripMenuItem";
-            personalizarToolStripMenuItem.Size = new Size(156, 24);
+            personalizarToolStripMenuItem.Size = new Size(180, 24);
             personalizarToolStripMenuItem.Text = "&Personalizar";
             // 
             // opcionesToolStripMenuItem
             // 
             opcionesToolStripMenuItem.Name = "opcionesToolStripMenuItem";
-            opcionesToolStripMenuItem.Size = new Size(156, 24);
+            opcionesToolStripMenuItem.Size = new Size(180, 24);
             opcionesToolStripMenuItem.Text = "&Opciones";
             // 
             // ayudaToolStripMenuItem
@@ -253,30 +254,30 @@
             // contenidoToolStripMenuItem
             // 
             contenidoToolStripMenuItem.Name = "contenidoToolStripMenuItem";
-            contenidoToolStripMenuItem.Size = new Size(153, 24);
+            contenidoToolStripMenuItem.Size = new Size(180, 24);
             contenidoToolStripMenuItem.Text = "&Contenido";
             // 
             // índiceToolStripMenuItem
             // 
             índiceToolStripMenuItem.Name = "índiceToolStripMenuItem";
-            índiceToolStripMenuItem.Size = new Size(153, 24);
+            índiceToolStripMenuItem.Size = new Size(180, 24);
             índiceToolStripMenuItem.Text = "Índ&ice";
             // 
             // buscarToolStripMenuItem
             // 
             buscarToolStripMenuItem.Name = "buscarToolStripMenuItem";
-            buscarToolStripMenuItem.Size = new Size(153, 24);
+            buscarToolStripMenuItem.Size = new Size(180, 24);
             buscarToolStripMenuItem.Text = "&Buscar";
             // 
             // toolStripSeparator5
             // 
             toolStripSeparator5.Name = "toolStripSeparator5";
-            toolStripSeparator5.Size = new Size(150, 6);
+            toolStripSeparator5.Size = new Size(177, 6);
             // 
             // acercadeToolStripMenuItem
             // 
             acercadeToolStripMenuItem.Name = "acercadeToolStripMenuItem";
-            acercadeToolStripMenuItem.Size = new Size(153, 24);
+            acercadeToolStripMenuItem.Size = new Size(180, 24);
             acercadeToolStripMenuItem.Text = "&Acerca de...";
             // 
             // FormularioInicio

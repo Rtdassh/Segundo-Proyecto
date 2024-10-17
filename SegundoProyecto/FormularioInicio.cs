@@ -1,4 +1,5 @@
 ﻿using MySql.Data.MySqlClient;
+using SegundoProyecto.Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -32,6 +33,12 @@ namespace SegundoProyecto
             {
                 MessageBox.Show("Error al conectar a la base de datos: " + ex.Message);
             }
+        }
+
+        private void menuStrip1_MouseDown(object sender, MouseEventArgs e)
+        {
+            Librerias.ReleaseCapture();
+            Librerias.SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
     }
 }

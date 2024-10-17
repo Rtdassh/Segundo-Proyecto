@@ -24,7 +24,7 @@ namespace SegundoProyecto
             contador += 100;
             if (label3.Text.Contains("...")) label3.Text = "Cargando";
             label3.Text += ".";
-            if (contador == 1000)
+            if (contador == 2500)
             {
                 new FormularioLogin().Show();
                 this.Hide();
