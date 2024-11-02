@@ -20,15 +20,15 @@ namespace SegundoProyecto
         bool estadoTextBoxPassword = false;
         const string user = "josu";
         const string pass = "123";
-        
+
         public FormularioLogin()
         {
             InitializeComponent();
-        }    
+        }
 
         private void pictureBox1_MouseDown(object sender, MouseEventArgs e)
         {
-            
+
             Librerias.ReleaseCapture();
             Librerias.SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
@@ -133,8 +133,20 @@ namespace SegundoProyecto
         private void buttonMinimize_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
-            
+
         }
-        
+
+        private void botonRedondeado1_Click(object sender, EventArgs e)
+        {
+            if (VerificarCredenciales())
+            {
+                MessageBox.Show($"Bienvenido {textBoxUser.Text}");
+                new FormularioInicio().Show();
+                this.Hide();
+                this.Close();
+            }
+            else if (textBoxUser.Text == "" || textBoxPassword.Text == "") labelErrorMessage.Text = "*Debes llenar todos los campos";
+            else labelErrorMessage.Text = "*Las credenciales ingresadas son incorrectas";
+        }
     }
 }

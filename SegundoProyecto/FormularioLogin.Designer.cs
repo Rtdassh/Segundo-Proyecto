@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             panelTop = new Panel();
+            botonRedondeado1 = new Models.BotonRedondeado();
             buttonMinimize = new Button();
             buttonClose = new Button();
             linkLabel1 = new LinkLabel();
@@ -36,7 +37,6 @@
             labelErrorMessage = new Label();
             label3 = new Label();
             label2 = new Label();
-            button1 = new Button();
             textBoxPassword = new TextBox();
             textBoxUser = new TextBox();
             label1 = new Label();
@@ -50,6 +50,7 @@
             // panelTop
             // 
             panelTop.BackColor = Color.White;
+            panelTop.Controls.Add(botonRedondeado1);
             panelTop.Controls.Add(buttonMinimize);
             panelTop.Controls.Add(buttonClose);
             panelTop.Controls.Add(linkLabel1);
@@ -57,7 +58,6 @@
             panelTop.Controls.Add(labelErrorMessage);
             panelTop.Controls.Add(label3);
             panelTop.Controls.Add(label2);
-            panelTop.Controls.Add(button1);
             panelTop.Controls.Add(textBoxPassword);
             panelTop.Controls.Add(textBoxUser);
             panelTop.Controls.Add(label1);
@@ -68,6 +68,26 @@
             panelTop.TabIndex = 0;
             panelTop.Paint += panelTop_Paint;
             panelTop.MouseDown += panelTop_MouseDown;
+            // 
+            // botonRedondeado1
+            // 
+            botonRedondeado1.BackColor = Color.FromArgb(255, 140, 98);
+            botonRedondeado1.BackgroundColor = Color.FromArgb(255, 140, 98);
+            botonRedondeado1.BorderColor = Color.DarkGreen;
+            botonRedondeado1.BorderRadius = 15;
+            botonRedondeado1.BorderSize = 0;
+            botonRedondeado1.FlatAppearance.BorderSize = 0;
+            botonRedondeado1.FlatStyle = FlatStyle.Flat;
+            botonRedondeado1.Font = new Font("Victor Mono", 11.9999981F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            botonRedondeado1.ForeColor = Color.WhiteSmoke;
+            botonRedondeado1.Location = new Point(56, 287);
+            botonRedondeado1.Name = "botonRedondeado1";
+            botonRedondeado1.Size = new Size(150, 40);
+            botonRedondeado1.TabIndex = 3;
+            botonRedondeado1.Text = "Continuar";
+            botonRedondeado1.TextColor = Color.WhiteSmoke;
+            botonRedondeado1.UseVisualStyleBackColor = false;
+            botonRedondeado1.Click += botonRedondeado1_Click;
             // 
             // buttonMinimize
             // 
@@ -150,21 +170,6 @@
             label2.Size = new Size(66, 24);
             label2.TabIndex = 4;
             label2.Text = "Usuario";
-            // 
-            // button1
-            // 
-            button1.BackColor = Color.Coral;
-            button1.FlatAppearance.BorderSize = 0;
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.Font = new Font("Victor Mono", 11.9999981F);
-            button1.ForeColor = SystemColors.Control;
-            button1.Location = new Point(70, 292);
-            button1.Name = "button1";
-            button1.Size = new Size(124, 40);
-            button1.TabIndex = 3;
-            button1.Text = "Continuar";
-            button1.UseVisualStyleBackColor = false;
-            button1.Click += button1_Click;
             // 
             // textBoxPassword
             // 
@@ -258,11 +263,11 @@
         private TextBox textBoxUser;
         private Label label3;
         private Label label2;
-        private Button button1;
         private Label labelErrorMessage;
         private LinkLabel linkLabel1;
         private Label label4;
         private Button buttonClose;
         private Button buttonMinimize;
+        private Models.BotonRedondeado botonRedondeado1;
     }
 }
