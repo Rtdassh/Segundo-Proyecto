@@ -69,12 +69,12 @@
             // 
             label2.AutoSize = true;
             label2.BackColor = Color.White;
-            label2.Font = new Font("Sora", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label2.Font = new Font("Sora", 6F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label2.ForeColor = Color.FromArgb(52, 58, 64);
-            label2.Location = new Point(76, 9);
+            label2.Location = new Point(254, 256);
             label2.Margin = new Padding(0);
             label2.Name = "label2";
-            label2.Size = new Size(217, 17);
+            label2.Size = new Size(157, 13);
             label2.TabIndex = 3;
             label2.Text = "Ilustración diseñada por Freepik.com";
             label2.TextAlign = ContentAlignment.MiddleLeft;

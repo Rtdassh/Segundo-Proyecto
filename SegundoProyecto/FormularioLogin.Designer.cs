@@ -29,12 +29,13 @@
         private void InitializeComponent()
         {
             panelTop = new Panel();
+            labelMessageUser = new Label();
             botonRedondeado1 = new Models.BotonRedondeado();
             buttonMinimize = new Button();
             buttonClose = new Button();
             linkLabel1 = new LinkLabel();
             label4 = new Label();
-            labelErrorMessage = new Label();
+            labelMessagePassword = new Label();
             label3 = new Label();
             label2 = new Label();
             textBoxPassword = new TextBox();
@@ -50,12 +51,13 @@
             // panelTop
             // 
             panelTop.BackColor = Color.White;
+            panelTop.Controls.Add(labelMessageUser);
             panelTop.Controls.Add(botonRedondeado1);
             panelTop.Controls.Add(buttonMinimize);
             panelTop.Controls.Add(buttonClose);
             panelTop.Controls.Add(linkLabel1);
             panelTop.Controls.Add(label4);
-            panelTop.Controls.Add(labelErrorMessage);
+            panelTop.Controls.Add(labelMessagePassword);
             panelTop.Controls.Add(label3);
             panelTop.Controls.Add(label2);
             panelTop.Controls.Add(textBoxPassword);
@@ -69,6 +71,17 @@
             panelTop.Paint += panelTop_Paint;
             panelTop.MouseDown += panelTop_MouseDown;
             // 
+            // labelMessageUser
+            // 
+            labelMessageUser.AutoSize = true;
+            labelMessageUser.Font = new Font("Victor Mono", 6.75F);
+            labelMessageUser.ForeColor = Color.DarkRed;
+            labelMessageUser.Location = new Point(29, 178);
+            labelMessageUser.MaximumSize = new Size(200, 0);
+            labelMessageUser.Name = "labelMessageUser";
+            labelMessageUser.Size = new Size(0, 17);
+            labelMessageUser.TabIndex = 11;
+            // 
             // botonRedondeado1
             // 
             botonRedondeado1.BackColor = Color.FromArgb(255, 140, 98);
@@ -76,6 +89,7 @@
             botonRedondeado1.BorderColor = Color.DarkGreen;
             botonRedondeado1.BorderRadius = 15;
             botonRedondeado1.BorderSize = 0;
+            botonRedondeado1.Enabled = false;
             botonRedondeado1.FlatAppearance.BorderSize = 0;
             botonRedondeado1.FlatStyle = FlatStyle.Flat;
             botonRedondeado1.Font = new Font("Victor Mono", 11.9999981F, FontStyle.Regular, GraphicsUnit.Point, 0);
@@ -136,16 +150,16 @@
             label4.TabIndex = 7;
             label4.Text = "¿Aún no tienes una cuenta?";
             // 
-            // labelErrorMessage
+            // labelMessagePassword
             // 
-            labelErrorMessage.AutoSize = true;
-            labelErrorMessage.Font = new Font("Victor Mono", 5.999999F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            labelErrorMessage.ForeColor = Color.DarkRed;
-            labelErrorMessage.Location = new Point(27, 254);
-            labelErrorMessage.MaximumSize = new Size(200, 0);
-            labelErrorMessage.Name = "labelErrorMessage";
-            labelErrorMessage.Size = new Size(0, 14);
-            labelErrorMessage.TabIndex = 6;
+            labelMessagePassword.AutoSize = true;
+            labelMessagePassword.Font = new Font("Victor Mono", 6.75F);
+            labelMessagePassword.ForeColor = Color.DarkRed;
+            labelMessagePassword.Location = new Point(27, 254);
+            labelMessagePassword.MaximumSize = new Size(200, 0);
+            labelMessagePassword.Name = "labelMessagePassword";
+            labelMessagePassword.Size = new Size(0, 17);
+            labelMessagePassword.TabIndex = 6;
             // 
             // label3
             // 
@@ -183,6 +197,7 @@
             textBoxPassword.PasswordChar = '*';
             textBoxPassword.Size = new Size(199, 27);
             textBoxPassword.TabIndex = 2;
+            textBoxPassword.TextChanged += textBoxPassword_TextChanged;
             textBoxPassword.Enter += textBoxPassword_Enter;
             textBoxPassword.Leave += textBoxPassword_Leave;
             // 
@@ -197,6 +212,7 @@
             textBoxUser.Name = "textBoxUser";
             textBoxUser.Size = new Size(199, 27);
             textBoxUser.TabIndex = 1;
+            textBoxUser.TextChanged += textBoxUser_TextChanged;
             textBoxUser.Enter += textBoxUser_Enter;
             textBoxUser.Leave += textBoxUser_Leave;
             // 
@@ -263,11 +279,12 @@
         private TextBox textBoxUser;
         private Label label3;
         private Label label2;
-        private Label labelErrorMessage;
+        private Label labelMessagePassword;
         private LinkLabel linkLabel1;
         private Label label4;
         private Button buttonClose;
         private Button buttonMinimize;
         private Models.BotonRedondeado botonRedondeado1;
+        private Label labelMessageUser;
     }
 }
