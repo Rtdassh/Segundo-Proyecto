@@ -26,7 +26,7 @@ namespace SegundoProyecto
         {
             try
             {
-                connection.Open();
+                //connection.Open();
                 MessageBox.Show("Conexión exitosa a la base de datos");
             }
             catch (Exception ex)

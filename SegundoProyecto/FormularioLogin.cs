@@ -12,11 +12,13 @@ using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Windows.Input;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace SegundoProyecto
 {
     public partial class FormularioLogin : Form
     {
+        
         bool estadoTextBoxUser = false;
         bool estadoTextBoxPassword = false;
         bool activadorTextBoxUser = false;
@@ -28,12 +30,18 @@ namespace SegundoProyecto
         {
             InitializeComponent();
         }
-        static bool ValidarEmail(string email)
+        /*
+        private void AsignarEventos()
         {
-            string patron = @"^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$";
-            return Regex.IsMatch(email, patron);
+            foreach (Control control in this.Controls)
+            {
+                if (control is System.Windows.Forms.TextBox textBox)
+                {
+                    textBox.Enter += Funcionalidades.TextBox_Enter!;
+                }
+            }
         }
-
+        */
         private void pictureBox1_MouseDown(object sender, MouseEventArgs e)
         {
 
@@ -50,59 +58,16 @@ namespace SegundoProyecto
         {
             IntPtr region = Librerias.CreateRoundRectRgn(0, 0, this.Width, this.Height, 16, 24);
             this.Region = System.Drawing.Region.FromHrgn(region);
-            textBoxUser.KeyPress += new KeyPressEventHandler(CaracterEnterNegado!);
-            textBoxPassword.KeyPress += new KeyPressEventHandler(CaracterEnterNegado!);
+            textBoxUser.KeyPress += new KeyPressEventHandler(Funcionalidades.CaracterEnterNegado!);
+            textBoxPassword.KeyPress += new KeyPressEventHandler(Funcionalidades.CaracterEnterNegado!);
         }
 
         private void panelTop_Paint(object sender, PaintEventArgs e)
         {
-            if (estadoTextBoxUser)
-            { 
-                DibujoRectangulo(sender, e, (116, 198, 157), textBoxUser, 3, 3);
-                labelMessageUser.Text = "";
-            }
-            else if (textBoxUser.Text == "" && activadorTextBoxUser)
-            { 
-                DibujoRectangulo(sender, e, (255, 89, 94), textBoxUser, 3, 3);
-                labelMessageUser.Text = "Llenar el campo es obligatorio";
-            }
-            else DibujoRectangulo(sender, e, (45, 106, 79), textBoxUser);
-
-            if (estadoTextBoxPassword)
-            {
-                DibujoRectangulo(sender, e, (116, 198, 157), textBoxPassword, 3, 3);
-                labelMessagePassword.Text = "";
-            }
-            else if (textBoxPassword.Text == "" && activadorTextBoxPassword)
-            {
-                DibujoRectangulo(sender, e, (255, 89, 94), textBoxPassword, 3, 3);
-                labelMessagePassword.Text = "Llenar el campo es obligatorio";
-            }
-            else DibujoRectangulo(sender, e, (45, 106, 79), textBoxPassword);
+            Funcionalidades.FasesBoton(sender, e, estadoTextBoxUser, activadorTextBoxUser, textBoxUser,labelMessageUser);
+            Funcionalidades.FasesBoton(sender, e, estadoTextBoxPassword, activadorTextBoxPassword, textBoxPassword, labelMessagePassword);
         }
 
-        private void DibujoRectangulo(object sender, PaintEventArgs e, (byte, byte, byte) coloresRGB, TextBox textBox, int grosorPen = 2, int grosor = 2)
-        {
-            Panel? panel = sender as Panel;
-            if (panel != null)
-            {
-                Pen pen = new Pen(Color.FromArgb(coloresRGB.Item1, coloresRGB.Item2, coloresRGB.Item3), grosorPen);
-                e.Graphics.DrawRectangle(pen, new Rectangle(textBox.Location.X, textBox.Location.Y + 30, textBox.Width + 1, grosor));
-            }
-        }
-
- 
-
-        private void CaracterEnterNegado(object sender, KeyPressEventArgs e)
-        {
-            if (e.KeyChar == (char)Keys.Enter) e.Handled = true;
-        }
-
-        private void EnableMainButton(Button button, TextBox User, TextBox Password)
-        {
-            if (User.Text != "" && Password.Text != "") button.Enabled = true;
-            else button.Enabled = false;
-        }
         private void textBoxUser_Enter(object sender, EventArgs e)
         {
             estadoTextBoxUser = true;
@@ -131,7 +96,7 @@ namespace SegundoProyecto
             activadorTextBoxPassword = true;
             panelTop.Invalidate();
         }
-               
+
         private bool VerificarCredenciales()
         {
             if (textBoxUser.Text == user && textBoxPassword.Text == pass) return true;
@@ -171,13 +136,19 @@ namespace SegundoProyecto
 
         private void textBoxPassword_TextChanged(object sender, EventArgs e)
         {
-            EnableMainButton(botonRedondeado1, textBoxUser, textBoxPassword);
-
+            Funcionalidades.EnableMainButton(botonRedondeado1, textBoxUser, textBoxPassword);
         }
 
         private void textBoxUser_TextChanged(object sender, EventArgs e)
         {
-            EnableMainButton(botonRedondeado1, textBoxUser, textBoxPassword);
+            Funcionalidades.EnableMainButton(botonRedondeado1, textBoxUser, textBoxPassword);
+        }
+
+        public void TextBox_Enter(object sender, EventArgs e)
+        {
+            var estado = e as PaintEventArgs;
+            Funcionalidades.FasesBoton(sender, estado!, true, false, textBoxUser, labelMessageUser);
+            this.Invalidate();
         }
     }
 }

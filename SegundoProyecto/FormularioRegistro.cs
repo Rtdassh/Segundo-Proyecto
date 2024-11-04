@@ -17,6 +17,7 @@ namespace SegundoProyecto
         public FormularioRegistro()
         {
             InitializeComponent();
+            Funcionalidades.AsignarEventos(this,botonRegistrarse, textBoxUsername,textBoxPassword, textBoxEmail, textBoxConfirmPass);
         }
 
         private void FormularioRegistro_Load(object sender, EventArgs e)
@@ -31,25 +32,37 @@ namespace SegundoProyecto
             Librerias.SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
 
-        static bool ValidarEmail(string email)
-        {
-            string patron = @"^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$";
-            return Regex.IsMatch(email, patron);
-        }
-        private void DibujoRectangulo(object sender, PaintEventArgs e, (byte, byte, byte) coloresRGB, TextBox textBox, int grosorPen = 2, int grosor = 2)
-        {
-            Panel? panel = sender as Panel;
-            if (panel != null)
-            {
-                Pen pen = new Pen(Color.FromArgb(coloresRGB.Item1, coloresRGB.Item2, coloresRGB.Item3), grosorPen);
-                e.Graphics.DrawRectangle(pen, new Rectangle(textBox.Location.X, textBox.Location.Y + 30, textBox.Width + 1, grosor));
-            }
-        }
-
         private void textBoxEmail_Leave(object sender, EventArgs e)
         {
-            if (ValidarEmail(textBoxEmail.Text)) MessageBox.Show("True");
+            if (Funcionalidades.ValidarEmail(textBoxEmail.Text)) MessageBox.Show("True");
             else MessageBox.Show("False");
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            FormularioLogin formularioLogin = new();
+            formularioLogin.Show();
+            this.Close();
+        }
+
+        private void buttonClose_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void buttonMinimize_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void textBoxUsername_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBoxUsername_Leave(object sender, EventArgs e)
+        {
+
         }
     }
 }

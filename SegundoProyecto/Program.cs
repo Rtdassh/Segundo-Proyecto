@@ -1,3 +1,4 @@
+
 namespace SegundoProyecto
 {
     internal static class Program
@@ -13,5 +14,7 @@ namespace SegundoProyecto
             ApplicationConfiguration.Initialize();
             Application.Run(new PrincipalForm());
         }
+
+        
     }
 }

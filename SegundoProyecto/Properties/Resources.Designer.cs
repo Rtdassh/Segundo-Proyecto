@@ -153,6 +153,16 @@ namespace SegundoProyecto.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap lets_icons__back {
+            get {
+                object obj = ResourceManager.GetObject("lets-icons--back", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap material_symbols__minimize {
             get {
                 object obj = ResourceManager.GetObject("material-symbols--minimize", resourceCulture);

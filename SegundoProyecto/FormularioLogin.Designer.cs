@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormularioLogin));
             panelTop = new Panel();
             labelMessageUser = new Label();
             botonRedondeado1 = new Models.BotonRedondeado();
@@ -66,7 +67,7 @@
             panelTop.Font = new Font("Victor Mono", 9.75F);
             panelTop.Location = new Point(436, 0);
             panelTop.Name = "panelTop";
-            panelTop.Size = new Size(262, 414);
+            panelTop.Size = new Size(264, 420);
             panelTop.TabIndex = 0;
             panelTop.Paint += panelTop_Paint;
             panelTop.MouseDown += panelTop_MouseDown;
@@ -108,10 +109,11 @@
             buttonMinimize.FlatAppearance.BorderSize = 0;
             buttonMinimize.FlatStyle = FlatStyle.Flat;
             buttonMinimize.Image = Properties.Resources.material_symbols_light__minimize;
-            buttonMinimize.Location = new Point(199, -12);
+            buttonMinimize.Location = new Point(201, -16);
             buttonMinimize.Name = "buttonMinimize";
-            buttonMinimize.Size = new Size(27, 42);
+            buttonMinimize.Size = new Size(27, 46);
             buttonMinimize.TabIndex = 10;
+            buttonMinimize.TextAlign = ContentAlignment.TopCenter;
             buttonMinimize.UseVisualStyleBackColor = true;
             buttonMinimize.Click += buttonMinimize_Click;
             // 
@@ -234,7 +236,7 @@
             panel1.Dock = DockStyle.Left;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(439, 414);
+            panel1.Size = new Size(439, 420);
             panel1.TabIndex = 1;
             // 
             // pictureBox1
@@ -252,15 +254,16 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(698, 414);
+            ClientSize = new Size(700, 420);
             Controls.Add(panel1);
             Controls.Add(panelTop);
             FormBorderStyle = FormBorderStyle.None;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             MinimumSize = new Size(383, 414);
             Name = "FormularioLogin";
             RightToLeft = RightToLeft.No;
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "FormularioLogin";
+            Text = "Biblioteca ";
             Load += FormularioLogin_Load;
             panelTop.ResumeLayout(false);
             panelTop.PerformLayout();

@@ -28,4 +28,49 @@
     </EmbeddedResource>
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update="Fonts\Victor Mono\VictorMono-Bold.ttf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Fonts\Victor Mono\VictorMono-BoldItalic.ttf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Fonts\Victor Mono\VictorMono-ExtraLight.ttf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Fonts\Victor Mono\VictorMono-ExtraLightItalic.ttf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Fonts\Victor Mono\VictorMono-Italic.ttf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Fonts\Victor Mono\VictorMono-Light.ttf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Fonts\Victor Mono\VictorMono-LightItalic.ttf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Fonts\Victor Mono\VictorMono-Medium.ttf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Fonts\Victor Mono\VictorMono-MediumItalic.ttf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Fonts\Victor Mono\VictorMono-Regular.ttf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Fonts\Victor Mono\VictorMono-SemiBold.ttf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Fonts\Victor Mono\VictorMono-SemiBoldItalic.ttf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Fonts\Victor Mono\VictorMono-Thin.ttf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Fonts\Victor Mono\VictorMono-ThinItalic.ttf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>

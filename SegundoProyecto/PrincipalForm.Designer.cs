@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PrincipalForm));
             timer1 = new System.Windows.Forms.Timer(components);
             SuspendLayout();
             // 
@@ -42,6 +43,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(164, 62);
             FormBorderStyle = FormBorderStyle.None;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "PrincipalForm";
             Opacity = 0D;
             StartPosition = FormStartPosition.CenterScreen;
