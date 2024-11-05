@@ -39,17 +39,18 @@
             textBoxConfirmPass = new TextBox();
             label5 = new Label();
             textBoxEmail = new TextBox();
-            radioButtonLector = new RadioButton();
-            radioButtonBibliotecario = new RadioButton();
-            labelRol = new Label();
             linkLabel1 = new LinkLabel();
             label6 = new Label();
             buttonMinimize = new Button();
             buttonClose = new Button();
-            tabControl1 = new TabControl();
-            tabPageLector = new TabPage();
-            tabPageBibliotecario = new TabPage();
-            tabControl1.SuspendLayout();
+            labelMessageUser = new Label();
+            labelMessageEmail = new Label();
+            labelMessagePass = new Label();
+            labelMessageConfirmPass = new Label();
+            pictureBox1 = new PictureBox();
+            buttonEyeWatcherPass = new Button();
+            buttonEyeWatcherConfirmPass = new Button();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // botonRegistrarse
@@ -59,25 +60,27 @@
             botonRegistrarse.BorderColor = Color.DarkGreen;
             botonRegistrarse.BorderRadius = 15;
             botonRegistrarse.BorderSize = 0;
+            botonRegistrarse.Cursor = Cursors.Hand;
             botonRegistrarse.Enabled = false;
             botonRegistrarse.FlatAppearance.BorderSize = 0;
             botonRegistrarse.FlatStyle = FlatStyle.Flat;
             botonRegistrarse.Font = new Font("Victor Mono", 11.9999981F, FontStyle.Regular, GraphicsUnit.Point, 0);
             botonRegistrarse.ForeColor = Color.WhiteSmoke;
-            botonRegistrarse.Location = new Point(279, 340);
+            botonRegistrarse.Location = new Point(327, 381);
             botonRegistrarse.Name = "botonRegistrarse";
             botonRegistrarse.Size = new Size(150, 40);
-            botonRegistrarse.TabIndex = 10;
+            botonRegistrarse.TabIndex = 13;
             botonRegistrarse.Text = "Registrarse";
             botonRegistrarse.TextColor = Color.WhiteSmoke;
             botonRegistrarse.UseVisualStyleBackColor = false;
+            botonRegistrarse.Click += botonRegistrarse_Click;
             // 
             // labelErrorMessage
             // 
             labelErrorMessage.AutoSize = true;
             labelErrorMessage.Font = new Font("Victor Mono", 5.999999F, FontStyle.Regular, GraphicsUnit.Point, 0);
             labelErrorMessage.ForeColor = Color.DarkRed;
-            labelErrorMessage.Location = new Point(254, 188);
+            labelErrorMessage.Location = new Point(193, 238);
             labelErrorMessage.MaximumSize = new Size(200, 0);
             labelErrorMessage.Name = "labelErrorMessage";
             labelErrorMessage.Size = new Size(0, 14);
@@ -89,7 +92,7 @@
             label3.BackColor = Color.Transparent;
             label3.Font = new Font("Victor Mono", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label3.ForeColor = Color.Black;
-            label3.Location = new Point(158, 180);
+            label3.Location = new Point(97, 230);
             label3.Name = "label3";
             label3.Size = new Size(90, 24);
             label3.TabIndex = 12;
@@ -101,7 +104,7 @@
             label2.BackColor = Color.Transparent;
             label2.Font = new Font("Victor Mono", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label2.ForeColor = Color.Black;
-            label2.Location = new Point(102, 73);
+            label2.Location = new Point(41, 107);
             label2.Name = "label2";
             label2.Size = new Size(146, 24);
             label2.TabIndex = 11;
@@ -112,24 +115,26 @@
             textBoxPassword.BorderStyle = BorderStyle.None;
             textBoxPassword.Font = new Font("Victor Mono", 9.75F);
             textBoxPassword.ForeColor = Color.Black;
-            textBoxPassword.Location = new Point(254, 177);
-            textBoxPassword.MaxLength = 20;
+            textBoxPassword.Location = new Point(193, 227);
+            textBoxPassword.MaxLength = 30;
             textBoxPassword.Multiline = true;
             textBoxPassword.Name = "textBoxPassword";
             textBoxPassword.PasswordChar = '*';
-            textBoxPassword.Size = new Size(199, 27);
-            textBoxPassword.TabIndex = 9;
+            textBoxPassword.Size = new Size(250, 27);
+            textBoxPassword.TabIndex = 10;
+            textBoxPassword.Enter += textBoxPassword_Enter;
+            textBoxPassword.Leave += textBoxPassword_Leave;
             // 
             // textBoxUsername
             // 
             textBoxUsername.BorderStyle = BorderStyle.None;
             textBoxUsername.Font = new Font("Victor Mono", 9.75F);
             textBoxUsername.ForeColor = Color.Black;
-            textBoxUsername.Location = new Point(254, 73);
-            textBoxUsername.MaxLength = 20;
+            textBoxUsername.Location = new Point(193, 107);
+            textBoxUsername.MaxLength = 30;
             textBoxUsername.Multiline = true;
             textBoxUsername.Name = "textBoxUsername";
-            textBoxUsername.Size = new Size(199, 27);
+            textBoxUsername.Size = new Size(250, 27);
             textBoxUsername.TabIndex = 8;
             textBoxUsername.Enter += textBoxUsername_Enter;
             textBoxUsername.Leave += textBoxUsername_Leave;
@@ -138,11 +143,11 @@
             // 
             label1.AutoSize = true;
             label1.BackColor = Color.Transparent;
-            label1.Font = new Font("Victor Mono SemiBold", 15.7499981F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.ForeColor = Color.Black;
-            label1.Location = new Point(282, 22);
+            label1.Font = new Font("Victor Mono", 20.2499962F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.ForeColor = Color.FromArgb(54, 54, 54);
+            label1.Location = new Point(295, 35);
             label1.Name = "label1";
-            label1.Size = new Size(147, 38);
+            label1.Size = new Size(182, 49);
             label1.TabIndex = 7;
             label1.Text = "Regístrate";
             // 
@@ -152,7 +157,7 @@
             label4.BackColor = Color.Transparent;
             label4.Font = new Font("Victor Mono", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label4.ForeColor = Color.Black;
-            label4.Location = new Point(78, 239);
+            label4.Location = new Point(17, 290);
             label4.Name = "label4";
             label4.Size = new Size(170, 24);
             label4.TabIndex = 15;
@@ -163,13 +168,15 @@
             textBoxConfirmPass.BorderStyle = BorderStyle.None;
             textBoxConfirmPass.Font = new Font("Victor Mono", 9.75F);
             textBoxConfirmPass.ForeColor = Color.Black;
-            textBoxConfirmPass.Location = new Point(254, 236);
-            textBoxConfirmPass.MaxLength = 20;
+            textBoxConfirmPass.Location = new Point(193, 287);
+            textBoxConfirmPass.MaxLength = 30;
             textBoxConfirmPass.Multiline = true;
             textBoxConfirmPass.Name = "textBoxConfirmPass";
             textBoxConfirmPass.PasswordChar = '*';
-            textBoxConfirmPass.Size = new Size(199, 27);
-            textBoxConfirmPass.TabIndex = 14;
+            textBoxConfirmPass.Size = new Size(250, 27);
+            textBoxConfirmPass.TabIndex = 11;
+            textBoxConfirmPass.Enter += textBoxConfirmPass_Enter;
+            textBoxConfirmPass.Leave += textBoxConfirmPass_Leave;
             // 
             // label5
             // 
@@ -177,7 +184,7 @@
             label5.BackColor = Color.Transparent;
             label5.Font = new Font("Victor Mono", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label5.ForeColor = Color.Black;
-            label5.Location = new Point(94, 125);
+            label5.Location = new Point(33, 170);
             label5.Name = "label5";
             label5.Size = new Size(154, 24);
             label5.TabIndex = 17;
@@ -188,58 +195,24 @@
             textBoxEmail.BorderStyle = BorderStyle.None;
             textBoxEmail.Font = new Font("Victor Mono", 9.75F);
             textBoxEmail.ForeColor = Color.Black;
-            textBoxEmail.Location = new Point(254, 122);
-            textBoxEmail.MaxLength = 20;
+            textBoxEmail.Location = new Point(193, 167);
+            textBoxEmail.MaxLength = 30;
             textBoxEmail.Multiline = true;
             textBoxEmail.Name = "textBoxEmail";
-            textBoxEmail.Size = new Size(199, 27);
-            textBoxEmail.TabIndex = 16;
+            textBoxEmail.Size = new Size(250, 27);
+            textBoxEmail.TabIndex = 9;
+            textBoxEmail.Enter += textBoxEmail_Enter;
             textBoxEmail.Leave += textBoxEmail_Leave;
-            // 
-            // radioButtonLector
-            // 
-            radioButtonLector.AutoSize = true;
-            radioButtonLector.Font = new Font("Victor Mono", 8.999999F);
-            radioButtonLector.Location = new Point(496, 129);
-            radioButtonLector.Name = "radioButtonLector";
-            radioButtonLector.Size = new Size(70, 26);
-            radioButtonLector.TabIndex = 18;
-            radioButtonLector.TabStop = true;
-            radioButtonLector.Text = "Lector";
-            radioButtonLector.UseVisualStyleBackColor = true;
-            // 
-            // radioButtonBibliotecario
-            // 
-            radioButtonBibliotecario.AutoSize = true;
-            radioButtonBibliotecario.Font = new Font("Victor Mono", 8.999999F);
-            radioButtonBibliotecario.Location = new Point(496, 97);
-            radioButtonBibliotecario.Name = "radioButtonBibliotecario";
-            radioButtonBibliotecario.Size = new Size(119, 26);
-            radioButtonBibliotecario.TabIndex = 19;
-            radioButtonBibliotecario.TabStop = true;
-            radioButtonBibliotecario.Text = "Bibliotecario";
-            radioButtonBibliotecario.UseVisualStyleBackColor = true;
-            // 
-            // labelRol
-            // 
-            labelRol.AutoSize = true;
-            labelRol.Font = new Font("Victor Mono", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            labelRol.ForeColor = Color.Black;
-            labelRol.Location = new Point(496, 70);
-            labelRol.Name = "labelRol";
-            labelRol.Size = new Size(114, 24);
-            labelRol.TabIndex = 20;
-            labelRol.Text = "Escoje un rol";
             // 
             // linkLabel1
             // 
             linkLabel1.AutoSize = true;
-            linkLabel1.Font = new Font("Victor Mono", 8.249999F);
+            linkLabel1.Font = new Font("Victor Mono", 9.75F);
             linkLabel1.LinkColor = Color.Coral;
-            linkLabel1.Location = new Point(358, 308);
+            linkLabel1.Location = new Point(419, 354);
             linkLabel1.Name = "linkLabel1";
-            linkLabel1.Size = new Size(107, 20);
-            linkLabel1.TabIndex = 22;
+            linkLabel1.Size = new Size(122, 24);
+            linkLabel1.TabIndex = 12;
             linkLabel1.TabStop = true;
             linkLabel1.Text = "Iniciar Sesión";
             linkLabel1.LinkClicked += linkLabel1_LinkClicked;
@@ -247,10 +220,10 @@
             // label6
             // 
             label6.AutoSize = true;
-            label6.Font = new Font("Victor Mono", 8.249999F);
-            label6.Location = new Point(189, 308);
+            label6.Font = new Font("Victor Mono", 9.75F);
+            label6.Location = new Point(227, 354);
             label6.Name = "label6";
-            label6.Size = new Size(163, 20);
+            label6.Size = new Size(186, 24);
             label6.TabIndex = 21;
             label6.Text = "¿Ya tienes una cuenta?";
             // 
@@ -259,7 +232,7 @@
             buttonMinimize.FlatAppearance.BorderSize = 0;
             buttonMinimize.FlatStyle = FlatStyle.Flat;
             buttonMinimize.Image = Properties.Resources.material_symbols_light__minimize;
-            buttonMinimize.Location = new Point(635, -10);
+            buttonMinimize.Location = new Point(687, -10);
             buttonMinimize.Name = "buttonMinimize";
             buttonMinimize.Size = new Size(27, 39);
             buttonMinimize.TabIndex = 24;
@@ -272,59 +245,111 @@
             buttonClose.FlatAppearance.BorderSize = 0;
             buttonClose.FlatStyle = FlatStyle.Flat;
             buttonClose.Image = Properties.Resources.material_symbols_light__close__1_;
-            buttonClose.Location = new Point(668, 2);
+            buttonClose.Location = new Point(720, 2);
             buttonClose.Name = "buttonClose";
             buttonClose.Size = new Size(27, 27);
             buttonClose.TabIndex = 23;
             buttonClose.UseVisualStyleBackColor = true;
             buttonClose.Click += buttonClose_Click;
             // 
-            // tabControl1
+            // labelMessageUser
             // 
-            tabControl1.Controls.Add(tabPageLector);
-            tabControl1.Controls.Add(tabPageBibliotecario);
-            tabControl1.Location = new Point(496, 180);
-            tabControl1.Name = "tabControl1";
-            tabControl1.SelectedIndex = 0;
-            tabControl1.Size = new Size(204, 239);
-            tabControl1.TabIndex = 25;
-            tabControl1.TabStop = false;
-            tabControl1.Visible = false;
+            labelMessageUser.AutoSize = true;
+            labelMessageUser.Font = new Font("Victor Mono", 8.249999F);
+            labelMessageUser.ForeColor = Color.DarkRed;
+            labelMessageUser.Location = new Point(193, 140);
+            labelMessageUser.MaximumSize = new Size(300, 0);
+            labelMessageUser.Name = "labelMessageUser";
+            labelMessageUser.Size = new Size(0, 20);
+            labelMessageUser.TabIndex = 25;
             // 
-            // tabPageLector
+            // labelMessageEmail
             // 
-            tabPageLector.Location = new Point(4, 24);
-            tabPageLector.Name = "tabPageLector";
-            tabPageLector.Padding = new Padding(3);
-            tabPageLector.Size = new Size(196, 211);
-            tabPageLector.TabIndex = 0;
-            tabPageLector.Text = "tabPageLector";
-            tabPageLector.UseVisualStyleBackColor = true;
+            labelMessageEmail.AutoSize = true;
+            labelMessageEmail.Font = new Font("Victor Mono", 8.249999F);
+            labelMessageEmail.ForeColor = Color.DarkRed;
+            labelMessageEmail.Location = new Point(193, 200);
+            labelMessageEmail.MaximumSize = new Size(300, 0);
+            labelMessageEmail.Name = "labelMessageEmail";
+            labelMessageEmail.Size = new Size(0, 20);
+            labelMessageEmail.TabIndex = 26;
             // 
-            // tabPageBibliotecario
+            // labelMessagePass
             // 
-            tabPageBibliotecario.Location = new Point(4, 24);
-            tabPageBibliotecario.Name = "tabPageBibliotecario";
-            tabPageBibliotecario.Padding = new Padding(3);
-            tabPageBibliotecario.Size = new Size(196, 211);
-            tabPageBibliotecario.TabIndex = 1;
-            tabPageBibliotecario.Text = "tabPageBibliotecario";
-            tabPageBibliotecario.UseVisualStyleBackColor = true;
+            labelMessagePass.AutoSize = true;
+            labelMessagePass.Font = new Font("Victor Mono", 8.249999F);
+            labelMessagePass.ForeColor = Color.DarkRed;
+            labelMessagePass.Location = new Point(195, 261);
+            labelMessagePass.MaximumSize = new Size(300, 0);
+            labelMessagePass.Name = "labelMessagePass";
+            labelMessagePass.Size = new Size(0, 20);
+            labelMessagePass.TabIndex = 27;
+            // 
+            // labelMessageConfirmPass
+            // 
+            labelMessageConfirmPass.AutoSize = true;
+            labelMessageConfirmPass.Font = new Font("Victor Mono", 8.249999F);
+            labelMessageConfirmPass.ForeColor = Color.DarkRed;
+            labelMessageConfirmPass.Location = new Point(193, 320);
+            labelMessageConfirmPass.MaximumSize = new Size(300, 0);
+            labelMessageConfirmPass.Name = "labelMessageConfirmPass";
+            labelMessageConfirmPass.Size = new Size(0, 20);
+            labelMessageConfirmPass.TabIndex = 28;
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.Image = Properties.Resources.man_9066590_1280;
+            pictureBox1.Location = new Point(483, 63);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(283, 288);
+            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox1.TabIndex = 29;
+            pictureBox1.TabStop = false;
+            // 
+            // buttonEyeWatcherPass
+            // 
+            buttonEyeWatcherPass.Cursor = Cursors.Hand;
+            buttonEyeWatcherPass.FlatAppearance.BorderSize = 0;
+            buttonEyeWatcherPass.FlatStyle = FlatStyle.Flat;
+            buttonEyeWatcherPass.Image = Properties.Resources.fluent__eye_12_filled__1_;
+            buttonEyeWatcherPass.Location = new Point(450, 230);
+            buttonEyeWatcherPass.Name = "buttonEyeWatcherPass";
+            buttonEyeWatcherPass.Size = new Size(27, 24);
+            buttonEyeWatcherPass.TabIndex = 30;
+            buttonEyeWatcherPass.UseVisualStyleBackColor = true;
+            buttonEyeWatcherPass.MouseDown += buttonEyeWatcherPass_MouseDown;
+            buttonEyeWatcherPass.MouseUp += buttonEyeWatcherPass_MouseUp;
+            // 
+            // buttonEyeWatcherConfirmPass
+            // 
+            buttonEyeWatcherConfirmPass.Cursor = Cursors.Hand;
+            buttonEyeWatcherConfirmPass.FlatAppearance.BorderSize = 0;
+            buttonEyeWatcherConfirmPass.FlatStyle = FlatStyle.Flat;
+            buttonEyeWatcherConfirmPass.Image = Properties.Resources.fluent__eye_12_filled__1_;
+            buttonEyeWatcherConfirmPass.Location = new Point(450, 290);
+            buttonEyeWatcherConfirmPass.Name = "buttonEyeWatcherConfirmPass";
+            buttonEyeWatcherConfirmPass.Size = new Size(27, 24);
+            buttonEyeWatcherConfirmPass.TabIndex = 31;
+            buttonEyeWatcherConfirmPass.UseVisualStyleBackColor = true;
+            buttonEyeWatcherConfirmPass.MouseDown += buttonEyeWatcherConfirmPass_MouseDown;
+            buttonEyeWatcherConfirmPass.MouseUp += buttonEyeWatcherConfirmPass_MouseUp;
             // 
             // FormularioRegistro
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.Control;
-            ClientSize = new Size(700, 420);
-            Controls.Add(tabControl1);
+            ClientSize = new Size(750, 450);
+            Controls.Add(buttonEyeWatcherConfirmPass);
+            Controls.Add(buttonEyeWatcherPass);
+            Controls.Add(labelMessageConfirmPass);
+            Controls.Add(labelMessagePass);
+            Controls.Add(labelMessageEmail);
+            Controls.Add(labelMessageUser);
             Controls.Add(buttonMinimize);
             Controls.Add(buttonClose);
             Controls.Add(linkLabel1);
             Controls.Add(label6);
-            Controls.Add(labelRol);
-            Controls.Add(radioButtonBibliotecario);
-            Controls.Add(radioButtonLector);
             Controls.Add(label5);
             Controls.Add(textBoxEmail);
             Controls.Add(label4);
@@ -336,13 +361,15 @@
             Controls.Add(textBoxPassword);
             Controls.Add(textBoxUsername);
             Controls.Add(label1);
+            Controls.Add(pictureBox1);
             FormBorderStyle = FormBorderStyle.None;
             Name = "FormularioRegistro";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "FormularioRegistro";
             Load += FormularioRegistro_Load;
+            Paint += FormularioRegistro_Paint;
             MouseDown += FormularioRegistro_MouseDown;
-            tabControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -360,15 +387,16 @@
         private TextBox textBoxConfirmPass;
         private Label label5;
         private TextBox textBoxEmail;
-        private RadioButton radioButtonLector;
-        private RadioButton radioButtonBibliotecario;
-        private Label labelRol;
         private LinkLabel linkLabel1;
         private Label label6;
         private Button buttonMinimize;
         private Button buttonClose;
-        private TabControl tabControl1;
-        private TabPage tabPageLector;
-        private TabPage tabPageBibliotecario;
+        private Label labelMessageUser;
+        private Label labelMessageEmail;
+        private Label labelMessagePass;
+        private Label labelMessageConfirmPass;
+        private PictureBox pictureBox1;
+        private Button buttonEyeWatcherPass;
+        private Button buttonEyeWatcherConfirmPass;
     }
 }

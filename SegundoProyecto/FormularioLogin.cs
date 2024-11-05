@@ -19,10 +19,7 @@ namespace SegundoProyecto
     public partial class FormularioLogin : Form
     {
         
-        bool estadoTextBoxUser = false;
-        bool estadoTextBoxPassword = false;
-        bool activadorTextBoxUser = false;
-        bool activadorTextBoxPassword = false;
+        bool estadoTextBoxUser, estadoTextBoxPassword, activadorTextBoxUser, activadorTextBoxPassword = false;
         const string user = "josu";
         const string pass = "123";
 
@@ -112,7 +109,8 @@ namespace SegundoProyecto
 
         private void buttonClose_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            DialogResult exit_confirmation = MensajePersonalizado.Show("¿Está seguro de salir? Seleccione una opción para continuar", "Confirmación de Cierre", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (exit_confirmation == DialogResult.Yes) Application.Exit();
         }
 
         private void buttonMinimize_Click(object sender, EventArgs e)
@@ -125,13 +123,12 @@ namespace SegundoProyecto
         {
             if (VerificarCredenciales())
             {
-                MessageBox.Show($"Bienvenido {textBoxUser.Text}");
+                MensajePersonalizado.Show($"Has ingresado con éxito {textBoxUser.Text}", "Ingreso", MessageBoxButtons.OK,MessageBoxIcon.None);
                 new FormularioInicio().Show();
                 this.Hide();
                 this.Close();
             }
-            else if (textBoxUser.Text == "" || textBoxPassword.Text == "") labelMessagePassword.Text = "*Debes llenar todos los campos";
-            else labelMessagePassword.Text = "*Las credenciales ingresados son incorrectas";
+            else labelMessagePassword.Text = "*Las credenciales ingresadas son incorrectas";
         }
 
         private void textBoxPassword_TextChanged(object sender, EventArgs e)

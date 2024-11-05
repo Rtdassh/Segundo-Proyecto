@@ -1,4 +1,5 @@
 ﻿using Microsoft.VisualBasic.ApplicationServices;
+using Org.BouncyCastle.Tls;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,27 +17,68 @@ namespace SegundoProyecto.Models
             string patron = @"^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$";
             return Regex.IsMatch(email, patron);
         }
+        public static bool ValidarUsuario(string nombreUsuario)
+        {
+            string patron = @"^(?!.*\.\.)(?!.*\.$)(?!.*__)[a-zA-Z0-9](?!.*\W)(?!.*_{2,})(?!.*\s)(?!.*[_]$)(?!^[_])[A-Za-z0-9_]{3,15}$";
+
+            return Regex.IsMatch(nombreUsuario, patron);
+        }
+
+        public static bool ValidarPassword(string password)
+        {
+            string patron = @"^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$";
+            return Regex.IsMatch(password, patron);
+        }
+
+        public static string HallarFallaPassword(string password)
+        {
+            if (password.Length < 8) return "La contraseña debe tener al menos 8 caracteres.";
+            if (!Regex.IsMatch(password, @"[A-Z]")) return "La contraseña debe contener al menos una letra mayúscula.";
+            if (!Regex.IsMatch(password, @"[a-z]")) return "La contraseña debe contener al menos una letra minúscula.";
+            if (!Regex.IsMatch(password, @"\d")) return "La contraseña debe contener al menos un número.";
+            if (!Regex.IsMatch(password, @"[@$!%*?&]")) return "La contraseña debe contener al menos un carácter especial (@, $, !, %, *, ?, &).";
+
+            return "";
+        }
+
+        public static string HallarFallaUsuario(string nombreUsuario)
+        {
+            if (nombreUsuario.Length < 3) return "Debe tener al menos 3 caracteres.";
+            if (nombreUsuario.Length > 15) return "No puede tener más de 15 caracteres.";
+            if (!Regex.IsMatch(nombreUsuario, @"^[a-zA-Z0-9_]+$")) return "Solo puede contener letras, números y guiones bajos.";
+            if (nombreUsuario.StartsWith("_") || nombreUsuario.EndsWith("_")) return "No puede comenzar ni terminar con un guion bajo.";
+            return "";
+        }
+
 
         public static void DibujoRectangulo(object sender, PaintEventArgs e, (byte, byte, byte) coloresRGB, TextBox textBox, int grosorPen = 2, int grosor = 2)
         {
-            Panel? panel = sender as Panel;
-            if (panel != null)
-            {
-                Pen pen = new Pen(Color.FromArgb(coloresRGB.Item1, coloresRGB.Item2, coloresRGB.Item3), grosorPen);
-                e.Graphics.DrawRectangle(pen, new Rectangle(textBox.Location.X, textBox.Location.Y + 30, textBox.Width + 1, grosor));
-            }
+                Panel? panel = sender as Panel;
+                Form? form = sender as Form;
+                if (panel != null || form!=null)
+                {
+                    Pen pen = new Pen(Color.FromArgb(coloresRGB.Item1, coloresRGB.Item2, coloresRGB.Item3), grosorPen);
+                    e.Graphics.DrawRectangle(pen, new Rectangle(textBox.Location.X, textBox.Location.Y + 28, textBox.Width, grosor));
+                }
         }
         public static void CaracterEnterNegado(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar == (char)Keys.Enter) e.Handled = true;
         }
+        public static void GetSpecialTextBoxes(TextBox email, TextBox pass, TextBox confirmPass)
+        {
 
+        }
+        public static bool EvaluateMail(TextBox textBox, params TextBox[] textBoxes)
+        {
+            return textBox.Enabled = textBoxes.All(textBox => !string.IsNullOrEmpty(textBox.Text));
+        }
         public static void EnableMainButton(Button button, params TextBox[] textBoxes)
         {
             button.Enabled = textBoxes.All(textBox => !string.IsNullOrEmpty(textBox.Text));
         }
 
-        public static void FasesBoton(object sender, PaintEventArgs e, bool estado, bool activador, TextBox textBox, Label label)
+        public static void FasesBoton(object sender, PaintEventArgs e, bool estado, bool activador, TextBox textBox, Label label, byte casoTextBox = 100)
         {
             if (estado)
             {
@@ -49,15 +91,80 @@ namespace SegundoProyecto.Models
                 label.Text = "Llenar el campo es obligatorio";
             }
             else DibujoRectangulo(sender, e, (45, 106, 79), textBox);
+
+            switch (casoTextBox)
+            {
+                case 0:
+                    if (!ValidarUsuario(textBox.Text) && activador)
+                    {
+                        DibujoRectangulo(sender, e, (255, 89, 94), textBox, 3, 3);
+                        label.Text = HallarFallaUsuario(textBox.Text);
+                    }
+                    break;
+                case 1:
+                    if (!ValidarEmail(textBox.Text) && activador)
+                    {
+                        DibujoRectangulo(sender, e, (255, 89, 94), textBox, 3, 3);
+                        label.Text = "Debe ingresar un correo válido";
+                    }
+                    break;
+                case 2:
+                    if (!ValidarPassword(textBox.Text) && activador)
+                    {
+                        DibujoRectangulo(sender, e, (255, 89, 94), textBox, 3, 3);
+                        label.Text = HallarFallaPassword(textBox.Text);
+                    }
+                    break;
+                case 3:
+                    DibujoRectangulo(sender, e, (255, 89, 94), textBox, 3, 3);
+                    label.Text = "La contraseña ingresada no coincide";
+                    break;
+                default: 
+                    break;
+            }
         }
 
-        public static void AsignarEventos(Form form, Button mainButton, params TextBox[] textBoxes)
+        public static bool EvaluarIgualdad(TextBox textBoxPass, TextBox textBoxConfirmPass)
+        {
+            if (textBoxPass.Text == textBoxConfirmPass.Text) return true;
+                return false;
+        }
+
+
+        public static void AsignarEventoButton(Form form, Button mainButton, params TextBox[] textBoxes)
         {
             foreach (Control control in form.Controls)
             {
                 if (control is TextBox textBox) textBox.TextChanged += (sender, e) => EnableMainButton(mainButton, textBoxes);
             }
         }
+        public static void AsignarEventoEnter(Form form, params TextBox[] textBoxes)
+        {
+            foreach (Control control in form.Controls)
+            {
+                if (control is TextBox textBox) control.KeyPress += new KeyPressEventHandler(CaracterEnterNegado!);
+            }
+        }
 
+        public static Color CambiarBrillo(Color color, double correctionFactor)
+        {
+            double red = color.R;
+            double green = color.G;
+            double blue = color.B;
+            if (correctionFactor < 0)
+            {
+                correctionFactor = 1 + correctionFactor;
+                red *= correctionFactor;
+                green *= correctionFactor;
+                blue *= correctionFactor;
+            }
+            else
+            {
+                red = (255 - red) * correctionFactor + red;
+                green = (255 - green) * correctionFactor + green;
+                blue = (255 - blue) * correctionFactor + blue;
+            }
+            return Color.FromArgb(color.A, (byte)red, (byte)green, (byte)blue);
+        }
     }
 }

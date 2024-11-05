@@ -64,10 +64,10 @@
             panelTop.Controls.Add(textBoxPassword);
             panelTop.Controls.Add(textBoxUser);
             panelTop.Controls.Add(label1);
-            panelTop.Font = new Font("Victor Mono", 9.75F);
+            panelTop.Font = new Font("Victor Mono", 8.249999F);
             panelTop.Location = new Point(436, 0);
             panelTop.Name = "panelTop";
-            panelTop.Size = new Size(264, 420);
+            panelTop.Size = new Size(316, 450);
             panelTop.TabIndex = 0;
             panelTop.Paint += panelTop_Paint;
             panelTop.MouseDown += panelTop_MouseDown;
@@ -75,12 +75,12 @@
             // labelMessageUser
             // 
             labelMessageUser.AutoSize = true;
-            labelMessageUser.Font = new Font("Victor Mono", 6.75F);
+            labelMessageUser.Font = new Font("Victor Mono", 8.249999F);
             labelMessageUser.ForeColor = Color.DarkRed;
-            labelMessageUser.Location = new Point(29, 178);
-            labelMessageUser.MaximumSize = new Size(200, 0);
+            labelMessageUser.Location = new Point(35, 180);
+            labelMessageUser.MaximumSize = new Size(266, 0);
             labelMessageUser.Name = "labelMessageUser";
-            labelMessageUser.Size = new Size(0, 17);
+            labelMessageUser.Size = new Size(0, 20);
             labelMessageUser.TabIndex = 11;
             // 
             // botonRedondeado1
@@ -95,7 +95,7 @@
             botonRedondeado1.FlatStyle = FlatStyle.Flat;
             botonRedondeado1.Font = new Font("Victor Mono", 11.9999981F, FontStyle.Regular, GraphicsUnit.Point, 0);
             botonRedondeado1.ForeColor = Color.WhiteSmoke;
-            botonRedondeado1.Location = new Point(56, 287);
+            botonRedondeado1.Location = new Point(89, 319);
             botonRedondeado1.Name = "botonRedondeado1";
             botonRedondeado1.Size = new Size(150, 40);
             botonRedondeado1.TabIndex = 3;
@@ -109,7 +109,7 @@
             buttonMinimize.FlatAppearance.BorderSize = 0;
             buttonMinimize.FlatStyle = FlatStyle.Flat;
             buttonMinimize.Image = Properties.Resources.material_symbols_light__minimize;
-            buttonMinimize.Location = new Point(201, -16);
+            buttonMinimize.Location = new Point(255, -16);
             buttonMinimize.Name = "buttonMinimize";
             buttonMinimize.Size = new Size(27, 46);
             buttonMinimize.TabIndex = 10;
@@ -122,7 +122,7 @@
             buttonClose.FlatAppearance.BorderSize = 0;
             buttonClose.FlatStyle = FlatStyle.Flat;
             buttonClose.Image = Properties.Resources.material_symbols_light__close__1_;
-            buttonClose.Location = new Point(232, 3);
+            buttonClose.Location = new Point(286, 3);
             buttonClose.Name = "buttonClose";
             buttonClose.Size = new Size(27, 27);
             buttonClose.TabIndex = 9;
@@ -134,7 +134,7 @@
             linkLabel1.AutoSize = true;
             linkLabel1.Font = new Font("Victor Mono", 8.249999F);
             linkLabel1.LinkColor = SystemColors.MenuHighlight;
-            linkLabel1.Location = new Point(88, 379);
+            linkLabel1.Location = new Point(124, 405);
             linkLabel1.Name = "linkLabel1";
             linkLabel1.Size = new Size(86, 20);
             linkLabel1.TabIndex = 8;
@@ -146,7 +146,7 @@
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Victor Mono", 8.249999F);
-            label4.Location = new Point(37, 355);
+            label4.Location = new Point(78, 380);
             label4.Name = "label4";
             label4.Size = new Size(191, 20);
             label4.TabIndex = 7;
@@ -155,21 +155,21 @@
             // labelMessagePassword
             // 
             labelMessagePassword.AutoSize = true;
-            labelMessagePassword.Font = new Font("Victor Mono", 6.75F);
+            labelMessagePassword.Font = new Font("Victor Mono", 8.249999F);
             labelMessagePassword.ForeColor = Color.DarkRed;
-            labelMessagePassword.Location = new Point(27, 254);
-            labelMessagePassword.MaximumSize = new Size(200, 0);
+            labelMessagePassword.Location = new Point(35, 274);
+            labelMessagePassword.MaximumSize = new Size(266, 0);
             labelMessagePassword.Name = "labelMessagePassword";
-            labelMessagePassword.Size = new Size(0, 17);
+            labelMessagePassword.Size = new Size(0, 20);
             labelMessagePassword.TabIndex = 6;
             // 
             // label3
             // 
             label3.AutoSize = true;
             label3.BackColor = Color.Transparent;
-            label3.Font = new Font("Victor Mono", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label3.Font = new Font("Victor Mono", 9.75F);
             label3.ForeColor = Color.Black;
-            label3.Location = new Point(25, 192);
+            label3.Location = new Point(32, 212);
             label3.Name = "label3";
             label3.Size = new Size(90, 24);
             label3.TabIndex = 5;
@@ -179,25 +179,25 @@
             // 
             label2.AutoSize = true;
             label2.BackColor = Color.Transparent;
-            label2.Font = new Font("Victor Mono", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label2.Font = new Font("Victor Mono", 9.75F);
             label2.ForeColor = Color.Black;
-            label2.Location = new Point(25, 107);
+            label2.Location = new Point(32, 117);
             label2.Name = "label2";
-            label2.Size = new Size(66, 24);
+            label2.Size = new Size(138, 24);
             label2.TabIndex = 4;
-            label2.Text = "Usuario";
+            label2.Text = "Usuario o Correo";
             // 
             // textBoxPassword
             // 
             textBoxPassword.BorderStyle = BorderStyle.None;
             textBoxPassword.Font = new Font("Victor Mono", 9.75F);
             textBoxPassword.ForeColor = Color.Black;
-            textBoxPassword.Location = new Point(29, 219);
-            textBoxPassword.MaxLength = 20;
+            textBoxPassword.Location = new Point(32, 239);
+            textBoxPassword.MaxLength = 30;
             textBoxPassword.Multiline = true;
             textBoxPassword.Name = "textBoxPassword";
             textBoxPassword.PasswordChar = '*';
-            textBoxPassword.Size = new Size(199, 27);
+            textBoxPassword.Size = new Size(250, 27);
             textBoxPassword.TabIndex = 2;
             textBoxPassword.TextChanged += textBoxPassword_TextChanged;
             textBoxPassword.Enter += textBoxPassword_Enter;
@@ -208,11 +208,11 @@
             textBoxUser.BorderStyle = BorderStyle.None;
             textBoxUser.Font = new Font("Victor Mono", 9.75F);
             textBoxUser.ForeColor = Color.Black;
-            textBoxUser.Location = new Point(29, 134);
-            textBoxUser.MaxLength = 20;
+            textBoxUser.Location = new Point(32, 144);
+            textBoxUser.MaxLength = 30;
             textBoxUser.Multiline = true;
             textBoxUser.Name = "textBoxUser";
-            textBoxUser.Size = new Size(199, 27);
+            textBoxUser.Size = new Size(250, 27);
             textBoxUser.TabIndex = 1;
             textBoxUser.TextChanged += textBoxUser_TextChanged;
             textBoxUser.Enter += textBoxUser_Enter;
@@ -222,11 +222,11 @@
             // 
             label1.AutoSize = true;
             label1.BackColor = Color.Transparent;
-            label1.Font = new Font("Victor Mono SemiBold", 15.7499981F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.ForeColor = Color.Black;
-            label1.Location = new Point(29, 40);
+            label1.Font = new Font("Victor Mono", 17.9999981F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.ForeColor = Color.FromArgb(54, 54, 54);
+            label1.Location = new Point(56, 42);
             label1.Name = "label1";
-            label1.Size = new Size(199, 38);
+            label1.Size = new Size(215, 44);
             label1.TabIndex = 0;
             label1.Text = "Iniciar Sesión";
             // 
@@ -236,7 +236,7 @@
             panel1.Dock = DockStyle.Left;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(439, 420);
+            panel1.Size = new Size(439, 450);
             panel1.TabIndex = 1;
             // 
             // pictureBox1
@@ -244,7 +244,7 @@
             pictureBox1.Image = Properties.Resources.pexels_mayis_48519569_8254227;
             pictureBox1.Location = new Point(-17, -43);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(456, 503);
+            pictureBox1.Size = new Size(474, 516);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 3;
             pictureBox1.TabStop = false;
@@ -254,7 +254,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(700, 420);
+            ClientSize = new Size(750, 450);
             Controls.Add(panel1);
             Controls.Add(panelTop);
             FormBorderStyle = FormBorderStyle.None;
