@@ -17,5 +17,8 @@ namespace SegundoProyecto.Models
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
 
         public extern static void SendMessage(nint hWnd, int wMsg, int wParam, int lParam);
+
+        [System.Runtime.InteropServices.DllImport("gdi32.dll")]
+        public static extern bool DeleteObject(IntPtr hObject);
     }
 }

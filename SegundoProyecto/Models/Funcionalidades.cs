@@ -32,7 +32,7 @@ namespace SegundoProyecto.Models
 
         public static string HallarFallaPassword(string password)
         {
-            if (password.Length < 8) return "Debe mínimo tener 8 caracteres.";
+            if (password.Length < 8) return "Debe contener mínimo 8 caracteres.";
             if (!Regex.IsMatch(password, @"[A-Z]")) return "Debe contener mínimo una letra mayúscula.";
             if (!Regex.IsMatch(password, @"[a-z]")) return "Debe contener mínimo una letra minúscula.";
             if (!Regex.IsMatch(password, @"\d")) return "Debe contener mínimo un número.";

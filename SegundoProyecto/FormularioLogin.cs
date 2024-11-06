@@ -20,25 +20,14 @@ namespace SegundoProyecto
     {
         
         bool estadoTextBoxUser, estadoTextBoxPassword, activadorTextBoxUser, activadorTextBoxPassword = false;
-        const string user = "josu";
-        const string pass = "123";
+        Lector lector = new("Z1","josu", "a@a.a",Usuario.RolUsuario.Administrador,"123");
+
 
         public FormularioLogin()
         {
             InitializeComponent();
         }
-        /*
-        private void AsignarEventos()
-        {
-            foreach (Control control in this.Controls)
-            {
-                if (control is System.Windows.Forms.TextBox textBox)
-                {
-                    textBox.Enter += Funcionalidades.TextBox_Enter!;
-                }
-            }
-        }
-        */
+
         private void pictureBox1_MouseDown(object sender, MouseEventArgs e)
         {
 
@@ -57,6 +46,7 @@ namespace SegundoProyecto
             this.Region = System.Drawing.Region.FromHrgn(region);
             textBoxUser.KeyPress += new KeyPressEventHandler(Funcionalidades.CaracterEnterNegado!);
             textBoxPassword.KeyPress += new KeyPressEventHandler(Funcionalidades.CaracterEnterNegado!);
+            Usuario.listadoUsuarios.Add(lector);
         }
 
         private void panelTop_Paint(object sender, PaintEventArgs e)
@@ -94,12 +84,6 @@ namespace SegundoProyecto
             panelTop.Invalidate();
         }
 
-        private bool VerificarCredenciales()
-        {
-            if (textBoxUser.Text == user && textBoxPassword.Text == pass) return true;
-            else return false;
-        }
-
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             FormularioRegistro formularioRegistro = new();
@@ -124,11 +108,18 @@ namespace SegundoProyecto
             if (ManejoDatos.VerificarCredenciales(textBoxUser.Text, textBoxPassword.Text))
             {
                 MensajePersonalizado.Show($"Has ingresado con éxito {textBoxUser.Text}", "Ingreso", MessageBoxButtons.OK,MessageBoxIcon.None);
-                new FormularioInicio().Show();
+                new FormMenuLector().Show();
                 this.Hide();
                 this.Close();
             }
-            else labelMessagePassword.Text = "*Las credenciales ingresadas son incorrectas";
+            else 
+            {
+                MensajePersonalizado.Show($"Las credenciales ingresadas son incorrectas", "Ingreso", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                textBoxUser.Text = string.Empty;
+                textBoxPassword.Text = string.Empty;
+                activadorTextBoxPassword = false;
+                textBoxUser.Focus();
+            }
         }
 
         private void textBoxPassword_TextChanged(object sender, EventArgs e)

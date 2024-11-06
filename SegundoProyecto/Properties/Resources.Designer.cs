@@ -93,9 +93,29 @@ namespace SegundoProyecto.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap akar_icons__book {
+            get {
+                object obj = ResourceManager.GetObject("akar-icons--book", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap basil__document_outline__1_ {
             get {
                 object obj = ResourceManager.GetObject("basil--document-outline (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap carbon__report {
+            get {
+                object obj = ResourceManager.GetObject("carbon--report", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -143,9 +163,59 @@ namespace SegundoProyecto.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap hugeicons__maximize_01 {
+            get {
+                object obj = ResourceManager.GetObject("hugeicons--maximize-01", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap hugeicons__maximize_01__2_ {
+            get {
+                object obj = ResourceManager.GetObject("hugeicons--maximize-01 (2)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap humbleicons__maximize {
             get {
                 object obj = ResourceManager.GetObject("humbleicons--maximize", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap humbleicons__maximize__2_ {
+            get {
+                object obj = ResourceManager.GetObject("humbleicons--maximize (2)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap humbleicons__maximize__3_ {
+            get {
+                object obj = ResourceManager.GetObject("humbleicons--maximize (3)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap humbleicons__maximize__4_ {
+            get {
+                object obj = ResourceManager.GetObject("humbleicons--maximize (4)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -223,9 +293,29 @@ namespace SegundoProyecto.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap lucide__minimize {
+            get {
+                object obj = ResourceManager.GetObject("lucide--minimize", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap man_9066590_1280 {
             get {
                 object obj = ResourceManager.GetObject("man-9066590_1280", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap material_symbols__account_circle {
+            get {
+                object obj = ResourceManager.GetObject("material-symbols--account-circle", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -273,9 +363,49 @@ namespace SegundoProyecto.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap mdi__account_circle {
+            get {
+                object obj = ResourceManager.GetObject("mdi--account-circle", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap mdi__account_circle__1_ {
+            get {
+                object obj = ResourceManager.GetObject("mdi--account-circle (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap mdi__account_cog {
+            get {
+                object obj = ResourceManager.GetObject("mdi--account-cog", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap meditation_8314420_1280 {
             get {
                 object obj = ResourceManager.GetObject("meditation-8314420_1280", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap mingcute__home_4_fill {
+            get {
+                object obj = ResourceManager.GetObject("mingcute--home-4-fill", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -326,6 +456,16 @@ namespace SegundoProyecto.Properties {
         internal static System.Drawing.Bitmap pexels_rickyrecap_1926988__1_ {
             get {
                 object obj = ResourceManager.GetObject("pexels-rickyrecap-1926988 (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ph__hand_withdraw_duotone {
+            get {
+                object obj = ResourceManager.GetObject("ph--hand-withdraw-duotone", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -406,6 +546,36 @@ namespace SegundoProyecto.Properties {
         internal static System.Drawing.Bitmap question_icon {
             get {
                 object obj = ResourceManager.GetObject("question_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap tabler__search {
+            get {
+                object obj = ResourceManager.GetObject("tabler--search", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap tabler__search__1_ {
+            get {
+                object obj = ResourceManager.GetObject("tabler--search (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap tabler__search__3_ {
+            get {
+                object obj = ResourceManager.GetObject("tabler--search (3)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

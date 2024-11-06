@@ -121,11 +121,17 @@
   <data name="man-9066590_1280" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\man-9066590_1280.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="PruebaDddossssMesa de trabajo 1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\PruebaDddossssMesa de trabajo 1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="tabler--search (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tabler--search (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="carbon--report" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\carbon--report.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="material-symbols-light--minimize" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\material-symbols-light--minimize.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="mdi--account-cog" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\mdi--account-cog.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="pexels-lum3n-44775-309724" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pexels-lum3n-44775-309724.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -133,8 +139,8 @@
   <data name="fluent--eye-12-filled (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\fluent--eye-12-filled (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="pexels-rickyrecap-1926988 (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\pexels-rickyrecap-1926988 (1).jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="material-symbols-light--close" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\material-symbols-light--close.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="basil--document-outline (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\basil--document-outline (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -148,8 +154,8 @@
   <data name="pexels-rickyrecap-1926988" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pexels-rickyrecap-1926988.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="material-symbols-light--close" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\material-symbols-light--close.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="mdi--account-circle" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\mdi--account-circle.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="PruebaDssccddossssMesa de trabajo 1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\PruebaDssccddossssMesa de trabajo 1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -163,14 +169,20 @@
   <data name="material-symbols--minimize" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\material-symbols--minimize.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="akar-icons--book" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\akar-icons--book.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="ok_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ok_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="humbleicons--maximize" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\humbleicons--maximize.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="lucide--minimize" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\lucide--minimize.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="error_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\error_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="humbleicons--maximize" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\humbleicons--maximize.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="PruebaDosMesa de trabajo 1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\PruebaDosMesa de trabajo 1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -178,17 +190,32 @@
   <data name="material-symbols-light--close (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\material-symbols-light--close (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="40163478_8703151" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\40163478_8703151.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="pexels-rickyrecap-1926988 (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pexels-rickyrecap-1926988 (1).jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="iconamoon--screen-normal-thin (4)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\iconamoon--screen-normal-thin (4).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="tabler--search" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tabler--search.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="mdi--account-circle (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\mdi--account-circle (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="pexels-mayis-48519569-8254227" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pexels-mayis-48519569-8254227.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="humbleicons--maximize (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\humbleicons--maximize (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PruebaDddossssMesa de trabajo 1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PruebaDddossssMesa de trabajo 1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="advertencia_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\advertencia_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="hugeicons--maximize-01" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\hugeicons--maximize-01.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="question_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\question_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -196,31 +223,55 @@
   <data name="PruebaDossssMesa de trabajo 1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\PruebaDossssMesa de trabajo 1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="iconamoon--screen-normal-thin (3)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\iconamoon--screen-normal-thin (3).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="PruebaDscddossssMesa de trabajo 1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\PruebaDscddossssMesa de trabajo 1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="info_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\info_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="mingcute--home-4-fill" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\mingcute--home-4-fill.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="40163478_87031511" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\40163478_87031511.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="iconamoon--screen-normal-thin" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\iconamoon--screen-normal-thin.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="flat-color-icons--ok1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\flat-color-icons--ok1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="humbleicons--maximize (4)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\humbleicons--maximize (4).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="humbleicons--maximize (3)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\humbleicons--maximize (3).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PruebaDscddossssMesa de trabajo 1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PruebaDscddossssMesa de trabajo 1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="material-symbols--account-circle" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\material-symbols--account-circle.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="info_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\info_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="40163478_8703151" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\40163478_8703151.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="iconamoon--screen-normal-thin (3)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\iconamoon--screen-normal-thin (3).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="PruebaDossMesa de trabajo 1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\PruebaDossMesa de trabajo 1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="lets-icons--back" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\lets-icons--back.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="hugeicons--maximize-01 (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\hugeicons--maximize-01 (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ph--hand-withdraw-duotone" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ph--hand-withdraw-duotone.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="iconamoon--screen-normal-thin (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\iconamoon--screen-normal-thin (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="flat-color-icons--ok1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\flat-color-icons--ok1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="iconamoon--screen-normal-thin" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\iconamoon--screen-normal-thin.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="lets-icons--back" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\lets-icons--back.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tabler--search (3)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tabler--search (3).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
