@@ -272,7 +272,7 @@ namespace SegundoProyecto.Models
                     PrimaryColor = Color.FromArgb(255, 176, 46);
                     break;
                 case MessageBoxIcon.None: //None
-                    this.pictureBoxIcon.Image = Properties.Resources.ok_icon;
+                    this.pictureBoxIcon.Image = Properties.Resources.flat_color_icons__ok1;
                     PrimaryColor = Color.FromArgb(76, 172, 76);
                     break;
             }
@@ -290,5 +290,6 @@ namespace SegundoProyecto.Models
         {
             Close();
         }
+
     }
 }

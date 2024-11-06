@@ -19,47 +19,45 @@ namespace SegundoProyecto.Models
         }
         public static bool ValidarUsuario(string nombreUsuario)
         {
-            string patron = @"^(?!.*\.\.)(?!.*\.$)(?!.*__)[a-zA-Z0-9](?!.*\W)(?!.*_{2,})(?!.*\s)(?!.*[_]$)(?!^[_])[A-Za-z0-9_]{3,15}$";
+            string patron = @"^(?!.*\.\.)(?!.*\.$)(?!.*__)[a-zA-Z0-9](?!.*\W)(?!.*_{2,})(?!.*\s)(?!.*[_]$)(?!^[_])[A-Za-z0-9_]{2,14}$";
 
             return Regex.IsMatch(nombreUsuario, patron);
         }
 
         public static bool ValidarPassword(string password)
         {
-            string patron = @"^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$";
+            string patron = @"^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&#])[A-Za-z\d@$!%*?&#]{8,}$";
             return Regex.IsMatch(password, patron);
         }
 
         public static string HallarFallaPassword(string password)
         {
-            if (password.Length < 8) return "La contraseña debe tener al menos 8 caracteres.";
-            if (!Regex.IsMatch(password, @"[A-Z]")) return "La contraseña debe contener al menos una letra mayúscula.";
-            if (!Regex.IsMatch(password, @"[a-z]")) return "La contraseña debe contener al menos una letra minúscula.";
-            if (!Regex.IsMatch(password, @"\d")) return "La contraseña debe contener al menos un número.";
-            if (!Regex.IsMatch(password, @"[@$!%*?&]")) return "La contraseña debe contener al menos un carácter especial (@, $, !, %, *, ?, &).";
+            if (password.Length < 8) return "Debe mínimo tener 8 caracteres.";
+            if (!Regex.IsMatch(password, @"[A-Z]")) return "Debe contener mínimo una letra mayúscula.";
+            if (!Regex.IsMatch(password, @"[a-z]")) return "Debe contener mínimo una letra minúscula.";
+            if (!Regex.IsMatch(password, @"\d")) return "Debe contener mínimo un número.";
+            if (!Regex.IsMatch(password, @"[@$!%*?&#]")) return "Debe contener mínimo un carácter especial (@, $, !, %, *, ?, &, #).";
 
-            return "";
+            return "Falló?";
         }
 
         public static string HallarFallaUsuario(string nombreUsuario)
         {
-            if (nombreUsuario.Length < 3) return "Debe tener al menos 3 caracteres.";
+            if (nombreUsuario.Length < 3) return "Debe tener mínimo 3 caracteres.";
             if (nombreUsuario.Length > 15) return "No puede tener más de 15 caracteres.";
             if (!Regex.IsMatch(nombreUsuario, @"^[a-zA-Z0-9_]+$")) return "Solo puede contener letras, números y guiones bajos.";
             if (nombreUsuario.StartsWith("_") || nombreUsuario.EndsWith("_")) return "No puede comenzar ni terminar con un guion bajo.";
-            return "";
+            if (ManejoDatos.EvaluarUsuarioRepetido(nombreUsuario)) return "Ya existe ese nombre de usuario";
+            return "Falló?";
         }
 
 
-        public static void DibujoRectangulo(object sender, PaintEventArgs e, (byte, byte, byte) coloresRGB, TextBox textBox, int grosorPen = 2, int grosor = 2)
+        public static void DibujoRectangulo(Graphics graphics, (byte, byte, byte) coloresRGB, TextBox textBox, int grosorPen = 2, int grosor = 2)
         {
-                Panel? panel = sender as Panel;
-                Form? form = sender as Form;
-                if (panel != null || form!=null)
-                {
-                    Pen pen = new Pen(Color.FromArgb(coloresRGB.Item1, coloresRGB.Item2, coloresRGB.Item3), grosorPen);
-                    e.Graphics.DrawRectangle(pen, new Rectangle(textBox.Location.X, textBox.Location.Y + 28, textBox.Width, grosor));
-                }
+            using (Pen pen = new Pen(Color.FromArgb(coloresRGB.Item1, coloresRGB.Item2, coloresRGB.Item3), grosorPen))
+            {
+                graphics.DrawRectangle(pen, new Rectangle(textBox.Location.X, textBox.Location.Y + 28, textBox.Width, grosor));
+            }
         }
         public static void CaracterEnterNegado(object sender, KeyPressEventArgs e)
         {
@@ -77,50 +75,82 @@ namespace SegundoProyecto.Models
         {
             button.Enabled = textBoxes.All(textBox => !string.IsNullOrEmpty(textBox.Text));
         }
+        public static void EnableMainButton(Form formulario,Button button, TextBox textBoxUsername, TextBox textBoxEmail, TextBox textBoxPassword, TextBox textBoxConfirmPass)
+        {
+            bool emailValido = !string.IsNullOrEmpty(textBoxEmail.Text) && ValidarEmail(textBoxEmail.Text);
+            bool usuarioValido = !string.IsNullOrEmpty(textBoxUsername.Text) && ValidarUsuario(textBoxUsername.Text);
+            bool passwordValido = !string.IsNullOrEmpty(textBoxPassword.Text) && ValidarPassword(textBoxPassword.Text);
+            bool contraseñasCoinciden = EvaluarIgualdad(textBoxPassword, textBoxConfirmPass);
+            
+            button.Enabled = emailValido && usuarioValido && passwordValido && contraseñasCoinciden && !ManejoDatos.EvaluarUsuarioRepetido(textBoxUsername) && !ManejoDatos.EvaluarCorreoRepetido(textBoxEmail);
+            formulario.Invalidate();
+        }
 
         public static void FasesBoton(object sender, PaintEventArgs e, bool estado, bool activador, TextBox textBox, Label label, byte casoTextBox = 100)
         {
             if (estado)
             {
-                DibujoRectangulo(sender, e, (116, 198, 157), textBox, 3, 3);
+                DibujoRectangulo(e.Graphics, (116, 198, 157), textBox, 3, 3);
                 label.Text = "";
+                return;
             }
-            else if (string.IsNullOrEmpty(textBox.Text)&& activador)
-            {
-                DibujoRectangulo(sender, e, (255, 89, 94), textBox, 3, 3);
-                label.Text = "Llenar el campo es obligatorio";
-            }
-            else DibujoRectangulo(sender, e, (45, 106, 79), textBox);
+            
 
+            if (string.IsNullOrEmpty(textBox.Text) && activador)
+            {
+                DibujoRectangulo(e.Graphics, (255, 89, 94), textBox, 3, 3);
+                label.Text = "Llenar el campo es obligatorio";
+                return;
+            }
+
+            bool esValido = true;
+            string mensajeError = "";
             switch (casoTextBox)
             {
                 case 0:
-                    if (!ValidarUsuario(textBox.Text) && activador)
-                    {
-                        DibujoRectangulo(sender, e, (255, 89, 94), textBox, 3, 3);
-                        label.Text = HallarFallaUsuario(textBox.Text);
-                    }
+                    esValido = ValidarUsuario(textBox.Text) && !ManejoDatos.EvaluarUsuarioRepetido(textBox);
+                    if (!esValido) mensajeError = HallarFallaUsuario(textBox.Text);
                     break;
+                case 1 when activador == false && estado == false:
+                    DibujoRectangulo(e.Graphics, (45, 106, 79), textBox); // Color de borde válido
+                    label.Text = "";
+                    return;
                 case 1:
-                    if (!ValidarEmail(textBox.Text) && activador)
-                    {
-                        DibujoRectangulo(sender, e, (255, 89, 94), textBox, 3, 3);
-                        label.Text = "Debe ingresar un correo válido";
-                    }
+                    esValido = ValidarEmail(textBox.Text) && !ManejoDatos.EvaluarCorreoRepetido(textBox);
+                    if (!esValido) mensajeError = "Debe ingresar un correo válido";
+                    if (!esValido && ManejoDatos.EvaluarCorreoRepetido(textBox)) mensajeError = "Ese correo ya está registrado";
                     break;
+                case 2 when activador == false && estado == false:
+                    DibujoRectangulo(e.Graphics, (45, 106, 79), textBox); // Color de borde válido
+                    label.Text = "";
+                    return;
                 case 2:
-                    if (!ValidarPassword(textBox.Text) && activador)
-                    {
-                        DibujoRectangulo(sender, e, (255, 89, 94), textBox, 3, 3);
-                        label.Text = HallarFallaPassword(textBox.Text);
-                    }
+                    esValido = ValidarPassword(textBox.Text);
+                    if (!esValido) mensajeError = HallarFallaPassword(textBox.Text);
                     break;
+                case 3 when activador == false && estado == false:
+                    DibujoRectangulo(e.Graphics, (45, 106, 79), textBox); // Color de borde válido
+                    label.Text = "";
+                    return;
                 case 3:
-                    DibujoRectangulo(sender, e, (255, 89, 94), textBox, 3, 3);
-                    label.Text = "La contraseña ingresada no coincide";
+                    esValido = false; 
+                    mensajeError = "La contraseña ingresada no coincide";
                     break;
-                default: 
-                    break;
+                case 100:
+                    DibujoRectangulo(e.Graphics, (45, 106, 79), textBox); 
+                    label.Text = "";
+                    return; 
+            }
+
+            if (esValido)
+            {
+                DibujoRectangulo(e.Graphics, (45, 106, 79), textBox);
+                label.Text = "";
+            }
+            else if (activador)
+            {
+                DibujoRectangulo(e.Graphics,(255, 89, 94), textBox, 3, 3); 
+                label.Text = mensajeError;
             }
         }
 
@@ -129,13 +159,12 @@ namespace SegundoProyecto.Models
             if (textBoxPass.Text == textBoxConfirmPass.Text) return true;
                 return false;
         }
-
-
-        public static void AsignarEventoButton(Form form, Button mainButton, params TextBox[] textBoxes)
+        
+        public static void AsignarEventoButton(Form form,Button mainButton, TextBox textBoxUsername, TextBox textBoxEmail, TextBox textBoxPassword, TextBox textBoxConfirmPass)
         {
             foreach (Control control in form.Controls)
             {
-                if (control is TextBox textBox) textBox.TextChanged += (sender, e) => EnableMainButton(mainButton, textBoxes);
+                if (control is TextBox textBox) textBox.TextChanged += (sender, e) => EnableMainButton(form,mainButton, textBoxUsername, textBoxEmail, textBoxPassword, textBoxConfirmPass);
             }
         }
         public static void AsignarEventoEnter(Form form, params TextBox[] textBoxes)

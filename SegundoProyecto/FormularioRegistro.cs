@@ -20,7 +20,7 @@ namespace SegundoProyecto
         public FormularioRegistro()
         {
             InitializeComponent();
-            Funcionalidades.AsignarEventoButton(this, botonRegistrarse, textBoxUsername, textBoxPassword, textBoxEmail, textBoxConfirmPass);
+            Funcionalidades.AsignarEventoButton(this,botonRegistrarse, textBoxUsername, textBoxEmail, textBoxPassword, textBoxConfirmPass);
             Funcionalidades.AsignarEventoEnter(this, textBoxUsername, textBoxPassword, textBoxEmail, textBoxConfirmPass);
         }
 
@@ -55,7 +55,11 @@ namespace SegundoProyecto
         }
         private void botonRegistrarse_Click(object sender, EventArgs e)
         {
-            MensajePersonalizado.Show("prueba del funcionamiento", "Información de Registro", MessageBoxButtons.OKCancel, MessageBoxIcon.Information, MessageBoxDefaultButton.Button1);
+            ManejoDatos.AgregarLector(textBoxUsername.Text, textBoxEmail.Text, textBoxPassword.Text);
+            MensajePersonalizado.Show("¡Gracias por registrarte! Tu cuenta ha sido creada exitosamente. Pronto recibirás un correo electrónico con más detalles.", "Información de Registro", MessageBoxButtons.OK, MessageBoxIcon.None, MessageBoxDefaultButton.Button1);
+            FormularioLogin formularioLogin = new();
+            formularioLogin.Show();
+            this.Close();
         }
 
         private void textBoxUsername_Enter(object sender, EventArgs e)

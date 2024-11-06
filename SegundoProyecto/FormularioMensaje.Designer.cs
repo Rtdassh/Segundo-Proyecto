@@ -86,15 +86,15 @@
             panelBody.Dock = DockStyle.Top;
             panelBody.Location = new Point(0, 30);
             panelBody.Name = "panelBody";
-            panelBody.Size = new Size(442, 92);
+            panelBody.Size = new Size(442, 105);
             panelBody.TabIndex = 1;
             // 
             // pictureBoxIcon
             // 
-            pictureBoxIcon.Location = new Point(12, 15);
+            pictureBoxIcon.Location = new Point(12, 24);
             pictureBoxIcon.Name = "pictureBoxIcon";
-            pictureBoxIcon.Size = new Size(64, 64);
-            pictureBoxIcon.SizeMode = PictureBoxSizeMode.AutoSize;
+            pictureBoxIcon.Size = new Size(58, 52);
+            pictureBoxIcon.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBoxIcon.TabIndex = 13;
             pictureBoxIcon.TabStop = false;
             // 
@@ -117,9 +117,9 @@
             panelButtons.Controls.Add(button2);
             panelButtons.Controls.Add(button1);
             panelButtons.Dock = DockStyle.Fill;
-            panelButtons.Location = new Point(0, 122);
+            panelButtons.Location = new Point(0, 135);
             panelButtons.Name = "panelButtons";
-            panelButtons.Size = new Size(442, 51);
+            panelButtons.Size = new Size(442, 47);
             panelButtons.TabIndex = 2;
             // 
             // button3
@@ -133,9 +133,9 @@
             button3.FlatStyle = FlatStyle.Flat;
             button3.Font = new Font("Victor Mono", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             button3.ForeColor = Color.WhiteSmoke;
-            button3.Location = new Point(298, 6);
+            button3.Location = new Point(298, 9);
             button3.Name = "button3";
-            button3.Size = new Size(101, 33);
+            button3.Size = new Size(101, 30);
             button3.TabIndex = 16;
             button3.Text = "1";
             button3.TextColor = Color.WhiteSmoke;
@@ -152,9 +152,9 @@
             button2.FlatStyle = FlatStyle.Flat;
             button2.Font = new Font("Victor Mono", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             button2.ForeColor = Color.WhiteSmoke;
-            button2.Location = new Point(168, 6);
+            button2.Location = new Point(168, 9);
             button2.Name = "button2";
-            button2.Size = new Size(101, 33);
+            button2.Size = new Size(101, 30);
             button2.TabIndex = 15;
             button2.Text = "1";
             button2.TextColor = Color.WhiteSmoke;
@@ -171,9 +171,9 @@
             button1.FlatStyle = FlatStyle.Flat;
             button1.Font = new Font("Victor Mono", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             button1.ForeColor = Color.WhiteSmoke;
-            button1.Location = new Point(38, 6);
+            button1.Location = new Point(38, 9);
             button1.Name = "button1";
-            button1.Size = new Size(101, 33);
+            button1.Size = new Size(101, 30);
             button1.TabIndex = 14;
             button1.Text = "1";
             button1.TextColor = Color.WhiteSmoke;
@@ -183,7 +183,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(442, 173);
+            ClientSize = new Size(442, 182);
             Controls.Add(panelButtons);
             Controls.Add(panelBody);
             Controls.Add(panelTitleBar);

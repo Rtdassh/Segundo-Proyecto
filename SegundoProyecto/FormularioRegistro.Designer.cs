@@ -258,7 +258,7 @@
             labelMessageUser.Font = new Font("Victor Mono", 8.249999F);
             labelMessageUser.ForeColor = Color.DarkRed;
             labelMessageUser.Location = new Point(193, 140);
-            labelMessageUser.MaximumSize = new Size(300, 0);
+            labelMessageUser.MaximumSize = new Size(350, 0);
             labelMessageUser.Name = "labelMessageUser";
             labelMessageUser.Size = new Size(0, 20);
             labelMessageUser.TabIndex = 25;
@@ -269,7 +269,7 @@
             labelMessageEmail.Font = new Font("Victor Mono", 8.249999F);
             labelMessageEmail.ForeColor = Color.DarkRed;
             labelMessageEmail.Location = new Point(193, 200);
-            labelMessageEmail.MaximumSize = new Size(300, 0);
+            labelMessageEmail.MaximumSize = new Size(350, 0);
             labelMessageEmail.Name = "labelMessageEmail";
             labelMessageEmail.Size = new Size(0, 20);
             labelMessageEmail.TabIndex = 26;
@@ -280,7 +280,7 @@
             labelMessagePass.Font = new Font("Victor Mono", 8.249999F);
             labelMessagePass.ForeColor = Color.DarkRed;
             labelMessagePass.Location = new Point(195, 261);
-            labelMessagePass.MaximumSize = new Size(300, 0);
+            labelMessagePass.MaximumSize = new Size(350, 0);
             labelMessagePass.Name = "labelMessagePass";
             labelMessagePass.Size = new Size(0, 20);
             labelMessagePass.TabIndex = 27;
@@ -291,7 +291,7 @@
             labelMessageConfirmPass.Font = new Font("Victor Mono", 8.249999F);
             labelMessageConfirmPass.ForeColor = Color.DarkRed;
             labelMessageConfirmPass.Location = new Point(193, 320);
-            labelMessageConfirmPass.MaximumSize = new Size(300, 0);
+            labelMessageConfirmPass.MaximumSize = new Size(350, 0);
             labelMessageConfirmPass.Name = "labelMessageConfirmPass";
             labelMessageConfirmPass.Size = new Size(0, 20);
             labelMessageConfirmPass.TabIndex = 28;

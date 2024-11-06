@@ -123,6 +123,16 @@ namespace SegundoProyecto.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap flat_color_icons__ok1 {
+            get {
+                object obj = ResourceManager.GetObject("flat-color-icons--ok1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap fluent__eye_12_filled__1_ {
             get {
                 object obj = ResourceManager.GetObject("fluent--eye-12-filled (1)", resourceCulture);

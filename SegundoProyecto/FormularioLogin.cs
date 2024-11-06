@@ -121,7 +121,7 @@ namespace SegundoProyecto
 
         private void botonRedondeado1_Click(object sender, EventArgs e)
         {
-            if (VerificarCredenciales())
+            if (ManejoDatos.VerificarCredenciales(textBoxUser.Text, textBoxPassword.Text))
             {
                 MensajePersonalizado.Show($"Has ingresado con éxito {textBoxUser.Text}", "Ingreso", MessageBoxButtons.OK,MessageBoxIcon.None);
                 new FormularioInicio().Show();
