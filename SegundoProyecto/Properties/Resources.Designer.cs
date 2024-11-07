@@ -113,6 +113,36 @@ namespace SegundoProyecto.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap bell__1_ {
+            get {
+                object obj = ResourceManager.GetObject("bell (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap bell__2_ {
+            get {
+                object obj = ResourceManager.GetObject("bell (2)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap bella {
+            get {
+                object obj = ResourceManager.GetObject("bella", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap carbon__report {
             get {
                 object obj = ResourceManager.GetObject("carbon--report", resourceCulture);
@@ -233,6 +263,46 @@ namespace SegundoProyecto.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap ic__baseline_settings {
+            get {
+                object obj = ResourceManager.GetObject("ic--baseline-settings", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ic__outline_search {
+            get {
+                object obj = ResourceManager.GetObject("ic--outline-search", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ic__round_settings {
+            get {
+                object obj = ResourceManager.GetObject("ic--round-settings", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ic__round_settings__1_ {
+            get {
+                object obj = ResourceManager.GetObject("ic--round-settings (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap iconamoon__screen_normal_thin {
             get {
                 object obj = ResourceManager.GetObject("iconamoon--screen-normal-thin", resourceCulture);
@@ -313,6 +383,16 @@ namespace SegundoProyecto.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap majesticons__search_line {
+            get {
+                object obj = ResourceManager.GetObject("majesticons--search-line", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap man_9066590_1280 {
             get {
                 object obj = ResourceManager.GetObject("man-9066590_1280", resourceCulture);
@@ -336,6 +416,16 @@ namespace SegundoProyecto.Properties {
         internal static System.Drawing.Bitmap material_symbols__minimize {
             get {
                 object obj = ResourceManager.GetObject("material-symbols--minimize", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap material_symbols__settings {
+            get {
+                object obj = ResourceManager.GetObject("material-symbols--settings", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -386,6 +476,46 @@ namespace SegundoProyecto.Properties {
         internal static System.Drawing.Bitmap mdi__account_circle__1_ {
             get {
                 object obj = ResourceManager.GetObject("mdi--account-circle (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap mdi__account_circle__2_ {
+            get {
+                object obj = ResourceManager.GetObject("mdi--account-circle (2)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap mdi__account_circle__3_ {
+            get {
+                object obj = ResourceManager.GetObject("mdi--account-circle (3)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap mdi__account_circle__4_ {
+            get {
+                object obj = ResourceManager.GetObject("mdi--account-circle (4)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap mdi__account_circle__5_ {
+            get {
+                object obj = ResourceManager.GetObject("mdi--account-circle (5)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -553,9 +683,39 @@ namespace SegundoProyecto.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap PruebaRecurso_1 {
+            get {
+                object obj = ResourceManager.GetObject("PruebaRecurso 1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap question_icon {
             get {
                 object obj = ResourceManager.GetObject("question_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap tabler__bell_filled {
+            get {
+                object obj = ResourceManager.GetObject("tabler--bell-filled", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap tabler__bell_filled__1_ {
+            get {
+                object obj = ResourceManager.GetObject("tabler--bell-filled (1)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

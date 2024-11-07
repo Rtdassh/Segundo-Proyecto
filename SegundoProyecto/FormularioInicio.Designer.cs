@@ -60,7 +60,13 @@
             buscarToolStripMenuItem = new ToolStripMenuItem();
             toolStripSeparator5 = new ToolStripSeparator();
             acercadeToolStripMenuItem = new ToolStripMenuItem();
+            pictureBox1 = new PictureBox();
+            panel4 = new Panel();
+            textBoxUser = new TextBox();
+            test1 = new Models.Test();
             menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            panel4.SuspendLayout();
             SuspendLayout();
             // 
             // menuStrip1
@@ -70,7 +76,7 @@
             menuStrip1.Items.AddRange(new ToolStripItem[] { toolStripMenuItem1, archivoToolStripMenuItem1, editarToolStripMenuItem, herramientasToolStripMenuItem, ayudaToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
-            menuStrip1.Size = new Size(800, 32);
+            menuStrip1.Size = new Size(741, 32);
             menuStrip1.TabIndex = 0;
             menuStrip1.Text = "menuStrip1";
             menuStrip1.MouseDown += menuStrip1_MouseDown;
@@ -235,13 +241,13 @@
             // personalizarToolStripMenuItem
             // 
             personalizarToolStripMenuItem.Name = "personalizarToolStripMenuItem";
-            personalizarToolStripMenuItem.Size = new Size(180, 28);
+            personalizarToolStripMenuItem.Size = new Size(176, 28);
             personalizarToolStripMenuItem.Text = "&Personalizar";
             // 
             // opcionesToolStripMenuItem
             // 
             opcionesToolStripMenuItem.Name = "opcionesToolStripMenuItem";
-            opcionesToolStripMenuItem.Size = new Size(180, 28);
+            opcionesToolStripMenuItem.Size = new Size(176, 28);
             opcionesToolStripMenuItem.Text = "&Opciones";
             // 
             // ayudaToolStripMenuItem
@@ -254,37 +260,81 @@
             // contenidoToolStripMenuItem
             // 
             contenidoToolStripMenuItem.Name = "contenidoToolStripMenuItem";
-            contenidoToolStripMenuItem.Size = new Size(180, 28);
+            contenidoToolStripMenuItem.Size = new Size(176, 28);
             contenidoToolStripMenuItem.Text = "&Contenido";
             // 
             // índiceToolStripMenuItem
             // 
             índiceToolStripMenuItem.Name = "índiceToolStripMenuItem";
-            índiceToolStripMenuItem.Size = new Size(180, 28);
+            índiceToolStripMenuItem.Size = new Size(176, 28);
             índiceToolStripMenuItem.Text = "Índ&ice";
             // 
             // buscarToolStripMenuItem
             // 
             buscarToolStripMenuItem.Name = "buscarToolStripMenuItem";
-            buscarToolStripMenuItem.Size = new Size(180, 28);
+            buscarToolStripMenuItem.Size = new Size(176, 28);
             buscarToolStripMenuItem.Text = "&Buscar";
             // 
             // toolStripSeparator5
             // 
             toolStripSeparator5.Name = "toolStripSeparator5";
-            toolStripSeparator5.Size = new Size(177, 6);
+            toolStripSeparator5.Size = new Size(173, 6);
             // 
             // acercadeToolStripMenuItem
             // 
             acercadeToolStripMenuItem.Name = "acercadeToolStripMenuItem";
-            acercadeToolStripMenuItem.Size = new Size(180, 28);
+            acercadeToolStripMenuItem.Size = new Size(176, 28);
             acercadeToolStripMenuItem.Text = "&Acerca de...";
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.Image = Properties.Resources.ic__outline_search;
+            pictureBox1.Location = new Point(504, 46);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Padding = new Padding(0, 15, 0, 0);
+            pictureBox1.Size = new Size(45, 59);
+            pictureBox1.TabIndex = 7;
+            pictureBox1.TabStop = false;
+            // 
+            // panel4
+            // 
+            panel4.Controls.Add(textBoxUser);
+            panel4.Controls.Add(test1);
+            panel4.Location = new Point(191, 46);
+            panel4.Name = "panel4";
+            panel4.Size = new Size(318, 59);
+            panel4.TabIndex = 6;
+            // 
+            // textBoxUser
+            // 
+            textBoxUser.BorderStyle = BorderStyle.None;
+            textBoxUser.Font = new Font("Victor Mono", 8.999999F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            textBoxUser.ForeColor = Color.Black;
+            textBoxUser.Location = new Point(37, 19);
+            textBoxUser.MaxLength = 30;
+            textBoxUser.Multiline = true;
+            textBoxUser.Name = "textBoxUser";
+            textBoxUser.Size = new Size(250, 18);
+            textBoxUser.TabIndex = 4;
+            // 
+            // test1
+            // 
+            test1.BackColor = Color.Transparent;
+            test1.BorderColor = Color.FromArgb(45, 106, 79);
+            test1.BorderHeight = 1;
+            test1.ForeColor = Color.Coral;
+            test1.Location = new Point(18, 14);
+            test1.Name = "test1";
+            test1.Size = new Size(293, 30);
+            test1.TabIndex = 4;
             // 
             // FormularioInicio
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(741, 151);
+            Controls.Add(pictureBox1);
+            Controls.Add(panel4);
             Controls.Add(menuStrip1);
             FormBorderStyle = FormBorderStyle.None;
             MainMenuStrip = menuStrip1;
@@ -294,6 +344,9 @@
             Load += FormularioInicio_Load;
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            panel4.ResumeLayout(false);
+            panel4.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -331,5 +384,9 @@
         private ToolStripSeparator toolStripSeparator5;
         private ToolStripMenuItem acercadeToolStripMenuItem;
         private ToolStripMenuItem toolStripMenuItem1;
+        private PictureBox pictureBox1;
+        private Panel panel4;
+        private TextBox textBoxUser;
+        private Models.Test test1;
     }
 }

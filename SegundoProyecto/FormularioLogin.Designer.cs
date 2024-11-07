@@ -189,6 +189,7 @@
             // 
             // textBoxPassword
             // 
+            textBoxPassword.BackColor = Color.White;
             textBoxPassword.BorderStyle = BorderStyle.None;
             textBoxPassword.Font = new Font("Victor Mono", 9.75F);
             textBoxPassword.ForeColor = Color.Black;
@@ -205,6 +206,7 @@
             // 
             // textBoxUser
             // 
+            textBoxUser.BackColor = Color.White;
             textBoxUser.BorderStyle = BorderStyle.None;
             textBoxUser.Font = new Font("Victor Mono", 9.75F);
             textBoxUser.ForeColor = Color.Black;

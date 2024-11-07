@@ -43,7 +43,7 @@
             // pictureBox1
             // 
             pictureBox1.Image = Properties.Resources.Diseño_sin_título__2_;
-            pictureBox1.Location = new Point(-21, -61);
+            pictureBox1.Location = new Point(-10, -62);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(470, 368);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
@@ -56,7 +56,7 @@
             label1.BackColor = Color.Transparent;
             label1.Font = new Font("Victor Mono", 21.7499962F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.FromArgb(52, 58, 64);
-            label1.Location = new Point(218, 26);
+            label1.Location = new Point(227, 24);
             label1.Margin = new Padding(0);
             label1.Name = "label1";
             label1.Size = new Size(193, 106);
@@ -68,13 +68,13 @@
             // 
             label3.AutoSize = true;
             label3.BackColor = Color.White;
-            label3.Font = new Font("Victor Mono", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label3.Font = new Font("Victor Mono", 11.9999981F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label3.ForeColor = Color.FromArgb(52, 58, 64);
-            label3.Location = new Point(290, 179);
+            label3.Location = new Point(306, 181);
             label3.Margin = new Padding(0);
             label3.MaximumSize = new Size(200, 0);
             label3.Name = "label3";
-            label3.Size = new Size(103, 35);
+            label3.Size = new Size(93, 29);
             label3.TabIndex = 4;
             label3.Text = "Cargando";
             label3.TextAlign = ContentAlignment.MiddleLeft;
