@@ -70,7 +70,7 @@
             label3.BackColor = Color.White;
             label3.Font = new Font("Victor Mono", 11.9999981F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label3.ForeColor = Color.FromArgb(52, 58, 64);
-            label3.Location = new Point(306, 181);
+            label3.Location = new Point(294, 172);
             label3.Margin = new Padding(0);
             label3.MaximumSize = new Size(200, 0);
             label3.Name = "label3";
