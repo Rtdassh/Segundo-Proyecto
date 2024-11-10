@@ -35,9 +35,9 @@
             buttonMenu = new Button();
             buttonConfigUsers = new Button();
             panelOptionsBar = new Panel();
-            button5 = new Button();
-            button3 = new Button();
-            button1 = new Button();
+            buttonProfile = new Button();
+            buttonNotifications = new Button();
+            buttonConfig = new Button();
             buttonMinimize = new Button();
             buttonMax = new Button();
             buttonClose = new Button();
@@ -169,9 +169,9 @@
             // 
             // panelOptionsBar
             // 
-            panelOptionsBar.Controls.Add(button5);
-            panelOptionsBar.Controls.Add(button3);
-            panelOptionsBar.Controls.Add(button1);
+            panelOptionsBar.Controls.Add(buttonProfile);
+            panelOptionsBar.Controls.Add(buttonNotifications);
+            panelOptionsBar.Controls.Add(buttonConfig);
             panelOptionsBar.Controls.Add(buttonMinimize);
             panelOptionsBar.Controls.Add(buttonMax);
             panelOptionsBar.Controls.Add(buttonClose);
@@ -183,55 +183,55 @@
             panelOptionsBar.TabIndex = 2;
             panelOptionsBar.MouseDown += panelOptionsBar_MouseDown;
             // 
-            // button5
+            // buttonProfile
             // 
-            button5.Dock = DockStyle.Right;
-            button5.FlatAppearance.BorderSize = 0;
-            button5.FlatStyle = FlatStyle.Flat;
-            button5.ForeColor = SystemColors.ButtonHighlight;
-            button5.Image = Properties.Resources.mdi__account_circle__5_;
-            button5.ImageAlign = ContentAlignment.TopCenter;
-            button5.Location = new Point(295, 0);
-            button5.Name = "button5";
-            button5.Padding = new Padding(0, 5, 0, 0);
-            button5.Size = new Size(60, 50);
-            button5.TabIndex = 7;
-            button5.TextAlign = ContentAlignment.BottomCenter;
-            button5.TextImageRelation = TextImageRelation.ImageAboveText;
-            button5.UseVisualStyleBackColor = false;
+            buttonProfile.Dock = DockStyle.Right;
+            buttonProfile.FlatAppearance.BorderSize = 0;
+            buttonProfile.FlatStyle = FlatStyle.Flat;
+            buttonProfile.ForeColor = SystemColors.ButtonHighlight;
+            buttonProfile.Image = Properties.Resources.mdi__account_circle__5_;
+            buttonProfile.ImageAlign = ContentAlignment.TopCenter;
+            buttonProfile.Location = new Point(295, 0);
+            buttonProfile.Name = "buttonProfile";
+            buttonProfile.Padding = new Padding(0, 5, 0, 0);
+            buttonProfile.Size = new Size(60, 50);
+            buttonProfile.TabIndex = 7;
+            buttonProfile.TextAlign = ContentAlignment.BottomCenter;
+            buttonProfile.TextImageRelation = TextImageRelation.ImageAboveText;
+            buttonProfile.UseVisualStyleBackColor = false;
             // 
-            // button3
+            // buttonNotifications
             // 
-            button3.Dock = DockStyle.Right;
-            button3.FlatAppearance.BorderSize = 0;
-            button3.FlatStyle = FlatStyle.Flat;
-            button3.ForeColor = SystemColors.ButtonHighlight;
-            button3.Image = Properties.Resources.tabler__bell_filled__1_;
-            button3.ImageAlign = ContentAlignment.TopCenter;
-            button3.Location = new Point(355, 0);
-            button3.Name = "button3";
-            button3.Padding = new Padding(0, 7, 0, 0);
-            button3.Size = new Size(66, 50);
-            button3.TabIndex = 6;
-            button3.TextAlign = ContentAlignment.BottomCenter;
-            button3.TextImageRelation = TextImageRelation.ImageAboveText;
-            button3.UseVisualStyleBackColor = false;
+            buttonNotifications.Dock = DockStyle.Right;
+            buttonNotifications.FlatAppearance.BorderSize = 0;
+            buttonNotifications.FlatStyle = FlatStyle.Flat;
+            buttonNotifications.ForeColor = SystemColors.ButtonHighlight;
+            buttonNotifications.Image = Properties.Resources.tabler__bell_filled__1_;
+            buttonNotifications.ImageAlign = ContentAlignment.TopCenter;
+            buttonNotifications.Location = new Point(355, 0);
+            buttonNotifications.Name = "buttonNotifications";
+            buttonNotifications.Padding = new Padding(0, 7, 0, 0);
+            buttonNotifications.Size = new Size(66, 50);
+            buttonNotifications.TabIndex = 6;
+            buttonNotifications.TextAlign = ContentAlignment.BottomCenter;
+            buttonNotifications.TextImageRelation = TextImageRelation.ImageAboveText;
+            buttonNotifications.UseVisualStyleBackColor = false;
             // 
-            // button1
+            // buttonConfig
             // 
-            button1.Dock = DockStyle.Right;
-            button1.FlatAppearance.BorderSize = 0;
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.ForeColor = SystemColors.ButtonHighlight;
-            button1.Image = Properties.Resources.ic__round_settings__1_;
-            button1.ImageAlign = ContentAlignment.TopCenter;
-            button1.Location = new Point(421, 0);
-            button1.Name = "button1";
-            button1.Padding = new Padding(0, 6, 0, 0);
-            button1.Size = new Size(60, 50);
-            button1.TabIndex = 4;
-            button1.TextImageRelation = TextImageRelation.ImageAboveText;
-            button1.UseVisualStyleBackColor = false;
+            buttonConfig.Dock = DockStyle.Right;
+            buttonConfig.FlatAppearance.BorderSize = 0;
+            buttonConfig.FlatStyle = FlatStyle.Flat;
+            buttonConfig.ForeColor = SystemColors.ButtonHighlight;
+            buttonConfig.Image = Properties.Resources.ic__round_settings__1_;
+            buttonConfig.ImageAlign = ContentAlignment.TopCenter;
+            buttonConfig.Location = new Point(421, 0);
+            buttonConfig.Name = "buttonConfig";
+            buttonConfig.Padding = new Padding(0, 6, 0, 0);
+            buttonConfig.Size = new Size(60, 50);
+            buttonConfig.TabIndex = 4;
+            buttonConfig.TextImageRelation = TextImageRelation.ImageAboveText;
+            buttonConfig.UseVisualStyleBackColor = false;
             // 
             // buttonMinimize
             // 
@@ -293,7 +293,6 @@
             FormBorderStyle = FormBorderStyle.None;
             Name = "FormMenuLector";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "FormMenuLector";
             Load += FormMenuLector_Load;
             SizeChanged += FormMenuLector_SizeChanged;
             panelMenuLateral.ResumeLayout(false);
@@ -309,12 +308,12 @@
         public Button buttonConfigUsers;
         private Panel panelOptionsBar;
         public Button buttonPrestamos;
-        public Button button1;
+        public Button buttonConfig;
         private Button buttonMinimize;
         private Button buttonClose;
         private Button buttonMax;
-        public Button button3;
-        public Button button5;
+        public Button buttonNotifications;
+        public Button buttonProfile;
         private Panel panelSubMenu;
     }
 }

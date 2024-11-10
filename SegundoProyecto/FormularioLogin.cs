@@ -18,9 +18,9 @@ namespace SegundoProyecto
 {
     public partial class FormularioLogin : Form
     {
-        
+
         bool estadoTextBoxUser, estadoTextBoxPassword, activadorTextBoxUser, activadorTextBoxPassword = false;
-        Lector lector = new("Z1","josu", "a@a.a",Usuario.RolUsuario.Administrador,"123");
+        Lector lector = new("Z1", "josu", "a@a.a", Usuario.RolUsuario.Administrador, "123");
 
 
         public FormularioLogin()
@@ -51,7 +51,7 @@ namespace SegundoProyecto
 
         private void panelTop_Paint(object sender, PaintEventArgs e)
         {
-            Funcionalidades.FasesBoton(sender, e, estadoTextBoxUser, activadorTextBoxUser, textBoxUser,labelMessageUser);
+            Funcionalidades.FasesBoton(sender, e, estadoTextBoxUser, activadorTextBoxUser, textBoxUser, labelMessageUser);
             Funcionalidades.FasesBoton(sender, e, estadoTextBoxPassword, activadorTextBoxPassword, textBoxPassword, labelMessagePassword);
         }
 
@@ -107,12 +107,12 @@ namespace SegundoProyecto
         {
             if (ManejoDatos.VerificarCredenciales(textBoxUser.Text, textBoxPassword.Text))
             {
-                MensajePersonalizado.Show($"Has ingresado con éxito {textBoxUser.Text}", "Ingreso", MessageBoxButtons.OK,MessageBoxIcon.None);
+                MensajePersonalizado.Show($"Has ingresado con éxito {textBoxUser.Text}", "Ingreso", MessageBoxButtons.OK, MessageBoxIcon.None);
                 new FormMenuLector().Show();
                 this.Hide();
                 this.Close();
             }
-            else 
+            else
             {
                 MensajePersonalizado.Show($"Las credenciales ingresadas son incorrectas", "Ingreso", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 textBoxUser.Text = string.Empty;

@@ -52,11 +52,11 @@ namespace SegundoProyecto.Models
         }
 
 
-        public static void DibujoRectangulo(Graphics graphics, (byte, byte, byte) coloresRGB, TextBox textBox, int grosorPen = 2, int grosor = 2)
+        public static void DibujoRectangulo(Graphics graphics, (byte, byte, byte) coloresRGB, Control control, int variacionY = 0,int grosorPen = 2, int grosor = 2)
         {
             using (Pen pen = new Pen(Color.FromArgb(coloresRGB.Item1, coloresRGB.Item2, coloresRGB.Item3), grosorPen))
             {
-                graphics.DrawRectangle(pen, new Rectangle(textBox.Location.X, textBox.Location.Y + 28, textBox.Width, grosor));
+                graphics.DrawRectangle(pen, new Rectangle(control.Location.X, control.Location.Y + variacionY, control.Width, grosor));
             }
         }
         public static void CaracterEnterNegado(object sender, KeyPressEventArgs e)
@@ -90,7 +90,7 @@ namespace SegundoProyecto.Models
         {
             if (estado)
             {
-                DibujoRectangulo(e.Graphics, (116, 198, 157), textBox, 3, 3);
+                DibujoRectangulo(e.Graphics, (116, 198, 157), textBox, 28, 3,3);
                 label.Text = "";
                 return;
             }
@@ -98,7 +98,7 @@ namespace SegundoProyecto.Models
 
             if (string.IsNullOrEmpty(textBox.Text) && activador)
             {
-                DibujoRectangulo(e.Graphics, (255, 89, 94), textBox, 3, 3);
+                DibujoRectangulo(e.Graphics, (255, 89, 94), textBox, 28, 3, 3);
                 label.Text = "Llenar el campo es obligatorio";
                 return;
             }
@@ -112,7 +112,7 @@ namespace SegundoProyecto.Models
                     if (!esValido) mensajeError = HallarFallaUsuario(textBox.Text);
                     break;
                 case 1 when activador == false && estado == false:
-                    DibujoRectangulo(e.Graphics, (45, 106, 79), textBox); // Color de borde válido
+                    DibujoRectangulo(e.Graphics, (45, 106, 79), textBox,28); // Color de borde válido
                     label.Text = "";
                     return;
                 case 1:
@@ -121,7 +121,7 @@ namespace SegundoProyecto.Models
                     if (!esValido && ManejoDatos.EvaluarCorreoRepetido(textBox)) mensajeError = "Ese correo ya está registrado";
                     break;
                 case 2 when activador == false && estado == false:
-                    DibujoRectangulo(e.Graphics, (45, 106, 79), textBox); // Color de borde válido
+                    DibujoRectangulo(e.Graphics, (45, 106, 79), textBox, 28); // Color de borde válido
                     label.Text = "";
                     return;
                 case 2:
@@ -129,7 +129,7 @@ namespace SegundoProyecto.Models
                     if (!esValido) mensajeError = HallarFallaPassword(textBox.Text);
                     break;
                 case 3 when activador == false && estado == false:
-                    DibujoRectangulo(e.Graphics, (45, 106, 79), textBox); // Color de borde válido
+                    DibujoRectangulo(e.Graphics, (45, 106, 79), textBox, 28); // Color de borde válido
                     label.Text = "";
                     return;
                 case 3:
@@ -137,19 +137,19 @@ namespace SegundoProyecto.Models
                     mensajeError = "La contraseña ingresada no coincide";
                     break;
                 case 100:
-                    DibujoRectangulo(e.Graphics, (45, 106, 79), textBox); 
+                    DibujoRectangulo(e.Graphics, (45, 106, 79), textBox, 28); 
                     label.Text = "";
                     return; 
             }
 
             if (esValido)
             {
-                DibujoRectangulo(e.Graphics, (45, 106, 79), textBox);
+                DibujoRectangulo(e.Graphics, (45, 106, 79), textBox, 28);
                 label.Text = "";
             }
             else if (activador)
             {
-                DibujoRectangulo(e.Graphics,(255, 89, 94), textBox, 3, 3); 
+                DibujoRectangulo(e.Graphics,(255, 89, 94), textBox, 28, 3, 3); 
                 label.Text = mensajeError;
             }
         }
