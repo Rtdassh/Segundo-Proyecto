@@ -28,23 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            button1 = new Button();
             SuspendLayout();
-            // 
-            // button1
-            // 
-            button1.Location = new Point(236, 171);
-            button1.Name = "button1";
-            button1.Size = new Size(136, 69);
-            button1.TabIndex = 0;
-            button1.Text = "button1";
-            button1.UseVisualStyleBackColor = true;
             // 
             // Menu
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            Controls.Add(button1);
             ForeColor = SystemColors.ControlText;
             Name = "Menu";
             Size = new Size(630, 400);
@@ -52,7 +41,5 @@
         }
 
         #endregion
-
-        private Button button1;
     }
 }

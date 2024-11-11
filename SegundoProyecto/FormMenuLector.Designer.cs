@@ -33,7 +33,7 @@
             buttonReportes = new Button();
             buttonPrestamos = new Button();
             buttonMenu = new Button();
-            buttonConfigUsers = new Button();
+            buttonMyAccount = new Button();
             panelOptionsBar = new Panel();
             buttonProfile = new Button();
             buttonNotifications = new Button();
@@ -75,7 +75,7 @@
             panelMenuLateral.Controls.Add(buttonPrestamos);
             panelMenuLateral.Controls.Add(buttonMenu);
             panelMenuLateral.Controls.Add(buttonBooks);
-            panelMenuLateral.Controls.Add(buttonConfigUsers);
+            panelMenuLateral.Controls.Add(buttonMyAccount);
             panelMenuLateral.Dock = DockStyle.Left;
             panelMenuLateral.Font = new Font("Victor Mono", 9.75F);
             panelMenuLateral.Location = new Point(0, 0);
@@ -98,7 +98,7 @@
             buttonReportes.Padding = new Padding(4, 10, 0, 0);
             buttonReportes.Size = new Size(120, 94);
             buttonReportes.TabIndex = 7;
-            buttonReportes.Text = "Reportes\r\n";
+            buttonReportes.Text = "Historial";
             buttonReportes.TextAlign = ContentAlignment.BottomCenter;
             buttonReportes.TextImageRelation = TextImageRelation.ImageAboveText;
             buttonReportes.UseVisualStyleBackColor = false;
@@ -146,26 +146,26 @@
             buttonMenu.UseVisualStyleBackColor = false;
             buttonMenu.Click += buttonMenu_Click;
             // 
-            // buttonConfigUsers
+            // buttonMyAccount
             // 
-            buttonConfigUsers.BackColor = Color.FromArgb(45, 106, 79);
-            buttonConfigUsers.Dock = DockStyle.Top;
-            buttonConfigUsers.FlatAppearance.BorderSize = 0;
-            buttonConfigUsers.FlatStyle = FlatStyle.Flat;
-            buttonConfigUsers.Font = new Font("Victor Mono SemiBold", 9.75F, FontStyle.Bold);
-            buttonConfigUsers.ForeColor = SystemColors.ButtonHighlight;
-            buttonConfigUsers.Image = Properties.Resources.mdi__account_cog;
-            buttonConfigUsers.ImageAlign = ContentAlignment.TopCenter;
-            buttonConfigUsers.Location = new Point(0, 0);
-            buttonConfigUsers.Name = "buttonConfigUsers";
-            buttonConfigUsers.Padding = new Padding(4, 10, 0, 0);
-            buttonConfigUsers.Size = new Size(120, 88);
-            buttonConfigUsers.TabIndex = 3;
-            buttonConfigUsers.Text = "Usuarios";
-            buttonConfigUsers.TextAlign = ContentAlignment.BottomCenter;
-            buttonConfigUsers.TextImageRelation = TextImageRelation.ImageAboveText;
-            buttonConfigUsers.UseVisualStyleBackColor = false;
-            buttonConfigUsers.Click += buttonConfigUsers_Click;
+            buttonMyAccount.BackColor = Color.FromArgb(45, 106, 79);
+            buttonMyAccount.Dock = DockStyle.Top;
+            buttonMyAccount.FlatAppearance.BorderSize = 0;
+            buttonMyAccount.FlatStyle = FlatStyle.Flat;
+            buttonMyAccount.Font = new Font("Victor Mono SemiBold", 9.75F, FontStyle.Bold);
+            buttonMyAccount.ForeColor = SystemColors.ButtonHighlight;
+            buttonMyAccount.Image = Properties.Resources.mdi__account_cog;
+            buttonMyAccount.ImageAlign = ContentAlignment.TopCenter;
+            buttonMyAccount.Location = new Point(0, 0);
+            buttonMyAccount.Name = "buttonMyAccount";
+            buttonMyAccount.Padding = new Padding(4, 10, 0, 0);
+            buttonMyAccount.Size = new Size(120, 88);
+            buttonMyAccount.TabIndex = 3;
+            buttonMyAccount.Text = "Mi Cuenta";
+            buttonMyAccount.TextAlign = ContentAlignment.BottomCenter;
+            buttonMyAccount.TextImageRelation = TextImageRelation.ImageAboveText;
+            buttonMyAccount.UseVisualStyleBackColor = false;
+            buttonMyAccount.Click += buttonConfigUsers_Click;
             // 
             // panelOptionsBar
             // 
@@ -199,6 +199,7 @@
             buttonProfile.TextAlign = ContentAlignment.BottomCenter;
             buttonProfile.TextImageRelation = TextImageRelation.ImageAboveText;
             buttonProfile.UseVisualStyleBackColor = false;
+            buttonProfile.Click += buttonProfile_Click;
             // 
             // buttonNotifications
             // 
@@ -216,6 +217,7 @@
             buttonNotifications.TextAlign = ContentAlignment.BottomCenter;
             buttonNotifications.TextImageRelation = TextImageRelation.ImageAboveText;
             buttonNotifications.UseVisualStyleBackColor = false;
+            buttonNotifications.Click += buttonNotifications_Click;
             // 
             // buttonConfig
             // 
@@ -232,6 +234,7 @@
             buttonConfig.TabIndex = 4;
             buttonConfig.TextImageRelation = TextImageRelation.ImageAboveText;
             buttonConfig.UseVisualStyleBackColor = false;
+            buttonConfig.Click += buttonConfig_Click;
             // 
             // buttonMinimize
             // 
@@ -275,7 +278,7 @@
             // 
             // panelSubMenu
             // 
-            panelSubMenu.Dock = DockStyle.Fill;
+            panelSubMenu.Anchor = AnchorStyles.None;
             panelSubMenu.Location = new Point(120, 50);
             panelSubMenu.Name = "panelSubMenu";
             panelSubMenu.Size = new Size(630, 400);
@@ -295,6 +298,7 @@
             StartPosition = FormStartPosition.CenterScreen;
             Load += FormMenuLector_Load;
             SizeChanged += FormMenuLector_SizeChanged;
+            MouseDown += FormMenuLector_MouseDown;
             panelMenuLateral.ResumeLayout(false);
             panelOptionsBar.ResumeLayout(false);
             ResumeLayout(false);
@@ -305,7 +309,7 @@
         public Button buttonReportes;
         public Button buttonMenu;
         public Button buttonBooks;
-        public Button buttonConfigUsers;
+        public Button buttonMyAccount;
         private Panel panelOptionsBar;
         public Button buttonPrestamos;
         public Button buttonConfig;

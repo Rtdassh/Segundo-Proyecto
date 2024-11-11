@@ -108,6 +108,7 @@ namespace SegundoProyecto
             if (ManejoDatos.VerificarCredenciales(textBoxUser.Text, textBoxPassword.Text))
             {
                 MensajePersonalizado.Show($"Has ingresado con éxito {textBoxUser.Text}", "Ingreso", MessageBoxButtons.OK, MessageBoxIcon.None);
+                
                 new FormMenuLector().Show();
                 this.Hide();
                 this.Close();

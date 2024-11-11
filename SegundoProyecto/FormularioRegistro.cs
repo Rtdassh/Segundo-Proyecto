@@ -56,6 +56,8 @@ namespace SegundoProyecto
         private void botonRegistrarse_Click(object sender, EventArgs e)
         {
             ManejoDatos.AgregarLector(textBoxUsername.Text, textBoxEmail.Text, textBoxPassword.Text);
+            Correo correo = new Correo();
+            correo.CrearCuerpoCorreo(textBoxEmail.Text);
             MensajePersonalizado.Show("¡Gracias por registrarte! Tu cuenta ha sido creada exitosamente. Pronto recibirás un correo electrónico con más detalles.", "Información de Registro", MessageBoxButtons.OK, MessageBoxIcon.None, MessageBoxDefaultButton.Button1);
             FormularioLogin formularioLogin = new();
             formularioLogin.Show();

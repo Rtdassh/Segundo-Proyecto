@@ -109,7 +109,7 @@
             buttonMinimize.FlatAppearance.BorderSize = 0;
             buttonMinimize.FlatStyle = FlatStyle.Flat;
             buttonMinimize.Image = Properties.Resources.material_symbols_light__minimize;
-            buttonMinimize.Location = new Point(255, -16);
+            buttonMinimize.Location = new Point(245, -16);
             buttonMinimize.Name = "buttonMinimize";
             buttonMinimize.Size = new Size(27, 46);
             buttonMinimize.TabIndex = 10;
@@ -122,9 +122,9 @@
             buttonClose.FlatAppearance.BorderSize = 0;
             buttonClose.FlatStyle = FlatStyle.Flat;
             buttonClose.Image = Properties.Resources.material_symbols_light__close__1_;
-            buttonClose.Location = new Point(286, 3);
+            buttonClose.Location = new Point(270, 3);
             buttonClose.Name = "buttonClose";
-            buttonClose.Size = new Size(27, 27);
+            buttonClose.Size = new Size(43, 27);
             buttonClose.TabIndex = 9;
             buttonClose.UseVisualStyleBackColor = true;
             buttonClose.Click += buttonClose_Click;

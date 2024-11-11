@@ -373,6 +373,36 @@ namespace SegundoProyecto.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap line_md__logout {
+            get {
+                object obj = ResourceManager.GetObject("line-md--logout", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap line_md__logout__1_ {
+            get {
+                object obj = ResourceManager.GetObject("line-md--logout (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap line_md__logout__1_1 {
+            get {
+                object obj = ResourceManager.GetObject("line-md--logout (1)1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap lucide__minimize {
             get {
                 object obj = ResourceManager.GetObject("lucide--minimize", resourceCulture);

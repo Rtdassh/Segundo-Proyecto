@@ -8,6 +8,7 @@ namespace SegundoProyecto.Models
 {
     internal class Usuario
     {
+        //public static Usuario usuarioActivo = new(); 
         public static List<Usuario> listadoUsuarios = new();
         public string Id { get; set; }
         public string Username { get; set; }

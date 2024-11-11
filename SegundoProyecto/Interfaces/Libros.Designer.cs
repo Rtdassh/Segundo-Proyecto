@@ -28,30 +28,87 @@
         /// </summary>
         private void InitializeComponent()
         {
-            numericUpDown1 = new NumericUpDown();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown1).BeginInit();
+            panel1 = new Panel();
+            buttonSearch = new Button();
+            textBoxSearch = new TextBox();
+            barraBusqueda = new Models.Test();
+            panel1.SuspendLayout();
             SuspendLayout();
             // 
-            // numericUpDown1
+            // panel1
             // 
-            numericUpDown1.Location = new Point(307, 204);
-            numericUpDown1.Name = "numericUpDown1";
-            numericUpDown1.Size = new Size(120, 23);
-            numericUpDown1.TabIndex = 0;
+            panel1.Controls.Add(buttonSearch);
+            panel1.Controls.Add(textBoxSearch);
+            panel1.Controls.Add(barraBusqueda);
+            panel1.Dock = DockStyle.Top;
+            panel1.Location = new Point(0, 0);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(630, 64);
+            panel1.TabIndex = 10;
+            // 
+            // buttonSearch
+            // 
+            buttonSearch.Anchor = AnchorStyles.Top;
+            buttonSearch.BackColor = Color.White;
+            buttonSearch.FlatAppearance.BorderSize = 0;
+            buttonSearch.FlatStyle = FlatStyle.Flat;
+            buttonSearch.Font = new Font("Victor Mono SemiBold", 9.75F, FontStyle.Bold);
+            buttonSearch.ForeColor = SystemColors.ButtonHighlight;
+            buttonSearch.Image = Properties.Resources.ic__outline_search;
+            buttonSearch.ImageAlign = ContentAlignment.TopCenter;
+            buttonSearch.Location = new Point(426, 14);
+            buttonSearch.Name = "buttonSearch";
+            buttonSearch.Size = new Size(37, 41);
+            buttonSearch.TabIndex = 7;
+            buttonSearch.TextAlign = ContentAlignment.BottomCenter;
+            buttonSearch.TextImageRelation = TextImageRelation.ImageAboveText;
+            buttonSearch.UseVisualStyleBackColor = false;
+            // 
+            // textBoxSearch
+            // 
+            textBoxSearch.Anchor = AnchorStyles.Top;
+            textBoxSearch.BorderStyle = BorderStyle.None;
+            textBoxSearch.Font = new Font("Victor Mono", 8.999999F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            textBoxSearch.ForeColor = Color.Black;
+            textBoxSearch.Location = new Point(146, 27);
+            textBoxSearch.MaxLength = 30;
+            textBoxSearch.Multiline = true;
+            textBoxSearch.Name = "textBoxSearch";
+            textBoxSearch.Size = new Size(259, 18);
+            textBoxSearch.TabIndex = 5;
+            // 
+            // barraBusqueda
+            // 
+            barraBusqueda.Anchor = AnchorStyles.Top;
+            barraBusqueda.BackColor = Color.Transparent;
+            barraBusqueda.BorderColor = Color.FromArgb(45, 106, 79);
+            barraBusqueda.BorderHeight = 1;
+            barraBusqueda.ForeColor = Color.Coral;
+            barraBusqueda.Location = new Point(127, 22);
+            barraBusqueda.Name = "barraBusqueda";
+            barraBusqueda.Size = new Size(293, 30);
+            barraBusqueda.TabIndex = 6;
             // 
             // Libros
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            Controls.Add(numericUpDown1);
+            BackColor = Color.White;
+            Controls.Add(panel1);
             Name = "Libros";
             Size = new Size(630, 400);
-            ((System.ComponentModel.ISupportInitialize)numericUpDown1).EndInit();
+            Load += Libros_Load;
+            Resize += Libros_Resize;
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
             ResumeLayout(false);
         }
 
         #endregion
 
-        private NumericUpDown numericUpDown1;
+        private Panel panel1;
+        private TextBox textBoxSearch;
+        private Models.Test barraBusqueda;
+        public Button buttonSearch;
     }
 }
