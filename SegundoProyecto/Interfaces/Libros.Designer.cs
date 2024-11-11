@@ -32,6 +32,7 @@
             buttonSearch = new Button();
             textBoxSearch = new TextBox();
             barraBusqueda = new Models.Test();
+            flowLayoutPanelBooks = new FlowLayoutPanel();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -43,7 +44,7 @@
             panel1.Dock = DockStyle.Top;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(630, 64);
+            panel1.Size = new Size(630, 79);
             panel1.TabIndex = 10;
             // 
             // buttonSearch
@@ -67,6 +68,7 @@
             // textBoxSearch
             // 
             textBoxSearch.Anchor = AnchorStyles.Top;
+            textBoxSearch.BackColor = Color.White;
             textBoxSearch.BorderStyle = BorderStyle.None;
             textBoxSearch.Font = new Font("Victor Mono", 8.999999F, FontStyle.Regular, GraphicsUnit.Point, 0);
             textBoxSearch.ForeColor = Color.Black;
@@ -89,11 +91,21 @@
             barraBusqueda.Size = new Size(293, 30);
             barraBusqueda.TabIndex = 6;
             // 
+            // flowLayoutPanelBooks
+            // 
+            flowLayoutPanelBooks.AutoScroll = true;
+            flowLayoutPanelBooks.Dock = DockStyle.Fill;
+            flowLayoutPanelBooks.Location = new Point(0, 79);
+            flowLayoutPanelBooks.Name = "flowLayoutPanelBooks";
+            flowLayoutPanelBooks.Size = new Size(630, 321);
+            flowLayoutPanelBooks.TabIndex = 11;
+            // 
             // Libros
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
+            Controls.Add(flowLayoutPanelBooks);
             Controls.Add(panel1);
             Name = "Libros";
             Size = new Size(630, 400);
@@ -110,5 +122,6 @@
         private TextBox textBoxSearch;
         private Models.Test barraBusqueda;
         public Button buttonSearch;
+        private FlowLayoutPanel flowLayoutPanelBooks;
     }
 }

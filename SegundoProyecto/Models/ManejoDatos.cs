@@ -35,7 +35,7 @@ namespace SegundoProyecto.Models
 
         public static void AgregarLector(string username, string correo, string password)
         {
-            Lector nuevoLector = new("C" + ContadorID(), username, correo, Usuario.RolUsuario.Lector, password);
+            Lector nuevoLector = new("C" + ContadorID(), username, correo, Usuario.RolUsuario.Lector, password, new List<Prestamo>());
             Usuario.listadoUsuarios.Add(nuevoLector);
         }
 

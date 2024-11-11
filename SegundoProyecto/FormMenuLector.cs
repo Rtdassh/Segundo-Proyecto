@@ -64,6 +64,7 @@ namespace SegundoProyecto
         {
             RedibujarRegion();
             buttonMenu_Click(buttonMenu, EventArgs.Empty);
+            
         }
 
         private void buttonClose_Click(object sender, EventArgs e)
@@ -79,7 +80,7 @@ namespace SegundoProyecto
                 this.Region.Dispose();
             IntPtr region = Librerias.CreateRoundRectRgn(0, 0, this.Width, this.Height, 16, 24);
             this.Region = System.Drawing.Region.FromHrgn(region);
-
+            Funcionalidades.tamanoFormulario = this.Size;
             Librerias.DeleteObject(region);
         }
         private void button3_Click(object sender, EventArgs e)
@@ -113,10 +114,32 @@ namespace SegundoProyecto
             Librerias.SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
 
-        private void buttonBooks_Click(object sender, EventArgs e)
+        private async void buttonBooks_Click(object sender, EventArgs e)
         {
+            var books = await LlamadaAPI.FetchBooksAsync();
+
+            if (SesionIniciada.Rol == Usuario.RolUsuario.Lector)
+            {
+                MessageBox.Show("test");
+                Lector? lector = (Lector)Usuario.listadoUsuarios.Find(n => n.Username == SesionIniciada.User)!;
+                foreach (var item in books)
+                {
+                    if (!Book.books.Any(b => b.Title == item.Title) && !lector.Prestamos.Any(b => b.Libro.Title == item.Title)) Book.books.Add(item);
+
+                }
+            }
+            else
+            {
+                foreach (var item in books)
+                {
+                    if (!Book.books.Any(b => b.Title == item.Title)) Book.books.Add(item);
+                }
+            }
+
             SelectedButton(sender, tuplaColores);
             AbrirUserControl(new Libros());
+
+            
         }
 
         private void buttonConfigUsers_Click(object sender, EventArgs e)
@@ -195,6 +218,9 @@ namespace SegundoProyecto
                     this.MouseDown -= FormMenuLector_MouseDown!; // Desuscribe el evento después de ocultar
                 }           
         }
+
+        public Size ObtenerTamano() => this.Size;
+        
 
     }
 }

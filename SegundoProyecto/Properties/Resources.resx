@@ -130,6 +130,9 @@
   <data name="tabler--bell-filled (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\tabler--bell-filled (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="not_found" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\not_found.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="iconamoon--screen-normal-thin (4)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\iconamoon--screen-normal-thin (4).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -217,8 +220,8 @@
   <data name="tabler--bell-filled" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\tabler--bell-filled.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="PruebaDddossssMesa de trabajo 1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\PruebaDddossssMesa de trabajo 1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="line-md--logout (1)1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\line-md--logout (1)1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="error_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\error_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -234,9 +237,6 @@
   </data>
   <data name="material-symbols-light--minimize" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\material-symbols-light--minimize.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="mdi--account-circle (3)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\mdi--account-circle (3).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="PruebaDossssMesa de trabajo 1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\PruebaDossssMesa de trabajo 1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -274,8 +274,8 @@
   <data name="info_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\info_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="pexels-rickyrecap-1926988" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\pexels-rickyrecap-1926988.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="mdi--account-circle (3)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\mdi--account-circle (3).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="PruebaDscddossssMesa de trabajo 1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\PruebaDscddossssMesa de trabajo 1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -298,6 +298,9 @@
   <data name="material-symbols-light--close" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\material-symbols-light--close.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="PruebaDddossssMesa de trabajo 1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PruebaDddossssMesa de trabajo 1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="hugeicons--maximize-01" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\hugeicons--maximize-01.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -319,6 +322,9 @@
   <data name="humbleicons--maximize (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\humbleicons--maximize (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="pexels-rickyrecap-1926988" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pexels-rickyrecap-1926988.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="mdi--account-circle (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\mdi--account-circle (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -331,7 +337,7 @@
   <data name="flat-color-icons--ok" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\flat-color-icons--ok.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="line-md--logout (1)1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\line-md--logout (1)1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="flat-color-icons--ok (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\flat-color-icons--ok (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

@@ -14,6 +14,7 @@ namespace SegundoProyecto.Models
 {
     internal class Funcionalidades
     {
+        public static Size tamanoFormulario = new();
         public static bool ValidarEmail(string email)
         {
             string patron = @"^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$";

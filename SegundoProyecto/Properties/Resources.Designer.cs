@@ -183,6 +183,16 @@ namespace SegundoProyecto.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap flat_color_icons__ok__1_ {
+            get {
+                object obj = ResourceManager.GetObject("flat-color-icons--ok (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap flat_color_icons__ok1 {
             get {
                 object obj = ResourceManager.GetObject("flat-color-icons--ok1", resourceCulture);
@@ -576,6 +586,16 @@ namespace SegundoProyecto.Properties {
         internal static System.Drawing.Bitmap mingcute__home_4_fill {
             get {
                 object obj = ResourceManager.GetObject("mingcute--home-4-fill", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap not_found {
+            get {
+                object obj = ResourceManager.GetObject("not_found", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

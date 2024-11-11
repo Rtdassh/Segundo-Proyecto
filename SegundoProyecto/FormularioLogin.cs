@@ -20,12 +20,12 @@ namespace SegundoProyecto
     {
 
         bool estadoTextBoxUser, estadoTextBoxPassword, activadorTextBoxUser, activadorTextBoxPassword = false;
-        Lector lector = new("Z1", "josu", "a@a.a", Usuario.RolUsuario.Administrador, "123");
-
+        Usuario admin= new("Z1", "josu", "a@a.a", Usuario.RolUsuario.Administrador, "123");
 
         public FormularioLogin()
         {
             InitializeComponent();
+            ManejoDatos.AgregarLector("dani", "a@a.ab","123");
         }
 
         private void pictureBox1_MouseDown(object sender, MouseEventArgs e)
@@ -46,7 +46,7 @@ namespace SegundoProyecto
             this.Region = System.Drawing.Region.FromHrgn(region);
             textBoxUser.KeyPress += new KeyPressEventHandler(Funcionalidades.CaracterEnterNegado!);
             textBoxPassword.KeyPress += new KeyPressEventHandler(Funcionalidades.CaracterEnterNegado!);
-            Usuario.listadoUsuarios.Add(lector);
+            Usuario.listadoUsuarios.Add(admin);
         }
 
         private void panelTop_Paint(object sender, PaintEventArgs e)
@@ -107,8 +107,8 @@ namespace SegundoProyecto
         {
             if (ManejoDatos.VerificarCredenciales(textBoxUser.Text, textBoxPassword.Text))
             {
+                SesionIniciada.IniciarSesion(textBoxUser.Text, "bro");
                 MensajePersonalizado.Show($"Has ingresado con éxito {textBoxUser.Text}", "Ingreso", MessageBoxButtons.OK, MessageBoxIcon.None);
-                
                 new FormMenuLector().Show();
                 this.Hide();
                 this.Close();

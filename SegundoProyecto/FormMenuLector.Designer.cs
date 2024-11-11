@@ -278,7 +278,7 @@
             // 
             // panelSubMenu
             // 
-            panelSubMenu.Anchor = AnchorStyles.None;
+            panelSubMenu.Dock = DockStyle.Fill;
             panelSubMenu.Location = new Point(120, 50);
             panelSubMenu.Name = "panelSubMenu";
             panelSubMenu.Size = new Size(630, 400);

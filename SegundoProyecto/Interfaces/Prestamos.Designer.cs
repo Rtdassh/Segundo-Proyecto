@@ -28,27 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-            monthCalendar1 = new MonthCalendar();
             SuspendLayout();
-            // 
-            // monthCalendar1
-            // 
-            monthCalendar1.Location = new Point(144, 98);
-            monthCalendar1.Name = "monthCalendar1";
-            monthCalendar1.TabIndex = 0;
             // 
             // Prestamos
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            Controls.Add(monthCalendar1);
             Name = "Prestamos";
             Size = new Size(630, 400);
             ResumeLayout(false);
         }
 
         #endregion
-
-        private MonthCalendar monthCalendar1;
     }
 }

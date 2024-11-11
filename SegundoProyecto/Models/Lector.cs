@@ -8,8 +8,10 @@ namespace SegundoProyecto.Models
 {
     internal class Lector : Usuario
     {
-        public Lector(string id, string username, string correo, RolUsuario rol, string contraseña) : base(id, username, correo, rol, contraseña)
+        public List<Prestamo> Prestamos { get; set; }
+        public Lector(string id, string username, string correo, RolUsuario rol, string contraseña, List<Prestamo> prestamos) : base(id, username, correo, rol, contraseña)
         {
+            Prestamos = prestamos;
         }
     }
 }

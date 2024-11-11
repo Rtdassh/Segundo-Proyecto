@@ -9,18 +9,25 @@ namespace SegundoProyecto.Models
     internal class Libro
     {
         public static List<Libro> listadoLibros = new();
-        public string Titulo { get; set; }
-        public string Autor { get; set; }
         public string ISBN { get; set; }
+        public string Titulo { get; set; }
+        public string TituloOriginal { get; set; }
+        public DateTime FechaPublicacion{ get; set; }
+        public string Autor { get; set; }
         public Genero Generos { get; set; }
+        public string Portada { get; set; }
+
         public byte CantidadLibros { get; set; }
 
-        public Libro(string titulo, string autor, string iSBN, Genero generos, byte cantidadLibros)
+        public Libro(string iSBN, string titulo, string tituloOriginal, DateTime fechaPublicacion, string autor, Genero generos, string portada, byte cantidadLibros)
         {
-            Titulo = titulo;
-            Autor = autor;
             ISBN = iSBN;
+            Titulo = titulo;
+            TituloOriginal = tituloOriginal;
+            FechaPublicacion = fechaPublicacion;
+            Autor = autor;
             Generos = generos;
+            Portada = portada;
             CantidadLibros = cantidadLibros;
         }
 

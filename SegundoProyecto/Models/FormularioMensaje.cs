@@ -16,7 +16,7 @@ namespace SegundoProyecto.Models
     {
 
         //Fields
-        private Color primaryColor = Color.FromArgb(252, 152, 116);
+        private Color primaryColor = Color.FromArgb(88, 129, 87);
         private int borderSize = 2;
 
         //Properties
@@ -35,7 +35,7 @@ namespace SegundoProyecto.Models
         {
             InitializeComponent();
             InitializeItems();
-            this.PrimaryColor = Color.FromArgb(252, 152, 116);
+            this.PrimaryColor = Color.FromArgb(88, 129, 87);
             this.labelMessage.Text = text;
             this.labelCaption.Text = "";
             SetFormSize();
@@ -45,7 +45,7 @@ namespace SegundoProyecto.Models
         {
             InitializeComponent();
             InitializeItems();
-            this.PrimaryColor = Color.FromArgb(252, 152, 116);
+            this.PrimaryColor = Color.FromArgb(88, 129, 87);
             this.labelMessage.Text = text;
             this.labelCaption.Text = caption;
             SetFormSize();
@@ -272,8 +272,8 @@ namespace SegundoProyecto.Models
                     PrimaryColor = Color.FromArgb(255, 176, 46);
                     break;
                 case MessageBoxIcon.None: //None
-                    this.pictureBoxIcon.Image = Properties.Resources.flat_color_icons__ok1;
-                    PrimaryColor = Color.FromArgb(76, 172, 76);
+                    this.pictureBoxIcon.Image = Properties.Resources.flat_color_icons__ok__1_;
+                    PrimaryColor = Color.FromArgb(88, 129, 87);
                     break;
             }
         }

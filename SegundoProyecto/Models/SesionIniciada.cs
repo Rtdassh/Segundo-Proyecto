@@ -11,6 +11,8 @@ namespace SegundoProyecto.Models
         public static string User { get; set; } = string.Empty;
         public static string Nombre { get; set; } = string.Empty;
         public static Usuario.RolUsuario Rol { get; set; }
+
+
        
         public static void LimpiarSesion()
         {

@@ -30,11 +30,8 @@ namespace SegundoProyecto
         private void buttonLogOut_Click(object sender, EventArgs e)
         {
             SesionIniciada.LimpiarSesion();
-            foreach (Form form in Application.OpenForms.Cast<Form>().ToList())
-            {
-                MessageBox.Show(form + " formulario");
-                if (form.Name != "PrincipalForm") form.Close();
-            }
+            foreach (Form form in Application.OpenForms.Cast<Form>().ToList()) if (form.Name != "PrincipalForm") form.Close();
+            
             GC.Collect();
             GC.WaitForPendingFinalizers();
 
